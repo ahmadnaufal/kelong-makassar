@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Kelong Makassar</string>
+
+    <string name="label_menu">Menu</string>
+    <string name="label_kelong">Kelong</string>
+    <string name="label_tutorial">Tutorial</string>
+    <string name="label_games">Games</string>
+    
+    <string name="label_lyrics">Lirik &amp; Arti</string>
+    <string name="label_meaning">Makna</string>
+    <string name="label_notes">Not Angka</string>
+    
+    <string name="title_tracks">Playlist</string>
+    <string name="title_track">Track 1</string>
+</resources>
