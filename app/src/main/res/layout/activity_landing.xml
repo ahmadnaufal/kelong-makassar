@@ -12,18 +12,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="28sp"
         android:text="@string/app_name" />
 
     <ImageView
         android:id="@+id/image_show_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:src="@android:drawable/ic_menu_help"
         android:contentDescription="A short description about this application."/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,10 +35,11 @@
             android:gravity="center_horizontal">
 
             <Button
+                style="@style/MyButton"
                 android:id="@+id/button_toggle_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Menu" />
+                android:text="@string/label_menu" />
 
             <LinearLayout
                 android:id="@+id/layout_buttons"
@@ -45,27 +49,32 @@
                 android:orientation="vertical">
 
                 <Button
+                    style="@style/MyButton"
                     android:id="@+id/button_kelong"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kelong" />
+                    android:text="@string/label_kelong" />
 
                 <Button
+                    style="@style/MyButton"
                     android:id="@+id/button_tutorial"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tutorial" />
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_tutorial" />
 
                 <Button
+                    style="@style/MyButton"
                     android:id="@+id/button_games"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Games" />
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_games" />
             </LinearLayout>
         </LinearLayout>
 
         <TextView
-            android:id="@+id/layout_help"
+            android:id="@+id/text_help"
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="60dp"

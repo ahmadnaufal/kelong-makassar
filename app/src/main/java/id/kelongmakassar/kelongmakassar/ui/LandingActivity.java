@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,7 +17,7 @@ import id.kelongmakassar.kelongmakassar.ui.tutorial.TutorialActivity;
 
 public class LandingActivity extends AppCompatActivity {
 
-    @BindView(R.id.layout_help) LinearLayout mHelpLayout;
+    @BindView(R.id.text_help) TextView mHelpText;
     @BindView(R.id.image_show_help) ImageView mShowHelpImageView;
     @BindView(R.id.layout_buttons) LinearLayout mButtonsLayout;
 
@@ -36,14 +37,14 @@ public class LandingActivity extends AppCompatActivity {
         isHelpShown = false;
         isMenuShown = false;
 
-        mHelpLayout.setVisibility(View.GONE);
+        mHelpText.setVisibility(View.GONE);
         mButtonsLayout.setVisibility(View.GONE);
     }
 
     @OnClick(R.id.image_show_help)
     void onHelpClick() {
         isHelpShown = !isHelpShown;
-        mHelpLayout.setVisibility(isHelpShown ? View.VISIBLE : View.GONE);
+        mHelpText.setVisibility(isHelpShown ? View.VISIBLE : View.GONE);
     }
 
     @OnClick(R.id.button_toggle_menu)

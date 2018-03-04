@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.kelongmakassar.kelongmakassar">
 
     <application
@@ -21,15 +22,30 @@
         <activity
             android:name=".ui.track.list.TrackListActivity"
             android:theme="@style/AppTheme"
-            android:label="@string/title_tracks" />
+            android:label="@string/title_tracks">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.LandingActivity" />
+        </activity>
         <activity
             android:name=".ui.track.detail.TrackDetailActivity"
             android:theme="@style/AppTheme"
-            android:label="@string/title_track" />
+            android:label="@string/title_track">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.track.detail.TrackDetailActivity" />
+        </activity>
         <activity
             android:name=".ui.tutorial.TutorialActivity"
             android:theme="@style/AppTheme"
-            android:label="@string/label_tutorial" />
+            android:label="@string/label_tutorial">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.LandingActivity" />
+        </activity>
     </application>
 
 </manifest>
