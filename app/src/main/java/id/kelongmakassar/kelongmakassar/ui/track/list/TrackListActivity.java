@@ -48,7 +48,7 @@ public class TrackListActivity extends AppCompatActivity implements TrackListMvp
             @Override
             public void onTrackSelected(Track track) {
                 // open the track detail activity
-                Intent intent = TrackDetailActivity.getStartIntent(TrackListActivity.this);
+                Intent intent = TrackDetailActivity.getStartIntent(TrackListActivity.this, track);
                 startActivity(intent);
             }
         });
