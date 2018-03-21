@@ -3,6 +3,7 @@ package id.kelongmakassar.kelongmakassar.data;
 import java.util.ArrayList;
 import java.util.List;
 
+import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
 
 /**
@@ -18,8 +19,8 @@ public class DataManager {
     public List<Track> getTracks() {
         // TODO add dummy tracks only for testing
         ArrayList<Track> tracks = new ArrayList<>();
-        tracks.add(new Track("Track 1"));
-        tracks.add(new Track("Track 2"));
+        tracks.add(new Track(R.raw.myfile, "Track 1"));
+        tracks.add(new Track(R.raw.myfile, "Track 2"));
 
         return tracks;
     }
