@@ -9,8 +9,11 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
 import id.kelongmakassar.kelongmakassar.services.MediaPlayerService;
@@ -19,6 +22,10 @@ public class TrackDetailActivity extends AppCompatActivity {
 
     private static final String SERVICE_STATE = "SERVICE_STATE";
     private static final String TRACK = "id.kelongmakassar.kelongmakassar.ui.track.detail.TrackDetailActivity.TRACK";
+
+    public static final String Broadcast_PLAY_NEW_AUDIO = "id.kelongmakassar.kelongmakassar.PlayNewAudio";
+
+    @BindView(R.id.seekbar_status_song) SeekBar statusSongSeekBar;
 
     private MediaPlayerService mMediaPlayerService;
     private boolean isServiceBound = false;
@@ -58,7 +65,29 @@ public class TrackDetailActivity extends AppCompatActivity {
             mTrack = getIntent().getParcelableExtra(TRACK);
         }
 
+        statusSongSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
         onPlayClick();
+    }
+
+    @OnClick(R.id.button_control)
+    void onMediaControlClick() {
+
     }
 
     @Override
@@ -108,6 +137,8 @@ public class TrackDetailActivity extends AppCompatActivity {
         } else {
             //Service is active
             //Send media with BroadcastReceiver
+            Intent broadcastIntent = new Intent(Broadcast_PLAY_NEW_AUDIO);
+            sendBroadcast(broadcastIntent);
         }
     }
 }

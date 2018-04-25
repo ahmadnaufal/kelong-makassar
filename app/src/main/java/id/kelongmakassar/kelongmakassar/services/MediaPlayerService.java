@@ -7,10 +7,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.session.MediaSessionManager;
 import android.net.Uri;
 import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
+import android.support.v4.media.session.MediaControllerCompat;
+import android.support.v4.media.session.MediaSessionCompat;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -26,6 +29,13 @@ public class MediaPlayerService extends Service implements MediaPlayer.OnComplet
         MediaPlayer.OnInfoListener, MediaPlayer.OnBufferingUpdateListener, AudioManager.OnAudioFocusChangeListener {
 
     private static final String MEDIA_PATH = "id.kelongmakassar.kelongmakassar.services.MediaPlayerService.MEDIA_PATH";
+
+    // media player interactions
+    public static final String ACTION_PLAY = "id.kelongmakassar.kelongmakassar.services.MediaPlayerService.ACTION_PLAY";
+    public static final String ACTION_PAUSE = "id.kelongmakassar.kelongmakassar.services.MediaPlayerService.ACTION_PAUSE";
+    public static final String ACTION_PREVIOUS = "id.kelongmakassar.kelongmakassar.services.MediaPlayerService.ACTION_PREVIOUS";
+    public static final String ACTION_NEXT = "id.kelongmakassar.kelongmakassar.services.MediaPlayerService.ACTION_NEXT";
+    public static final String ACTION_STOP = "id.kelongmakassar.kelongmakassar.services.MediaPlayerService.ACTION_STOP";
 
     // Binder, given to clients
     private final IBinder iBinder = new LocalBinder();
@@ -43,6 +53,10 @@ public class MediaPlayerService extends Service implements MediaPlayer.OnComplet
     private PhoneStateListener mPhoneStateListener;
     private TelephonyManager mTelephonyManager;
 
+    private MediaSessionManager mMediaSessionManager;
+    private MediaSessionCompat mMediaSessionCompat;
+    private MediaControllerCompat.TransportControls mTransportControls;
+
     // becoming noisy
     private BroadcastReceiver becomingNoisyReceiver = new BroadcastReceiver() {
         @Override
@@ -56,6 +70,28 @@ public class MediaPlayerService extends Service implements MediaPlayer.OnComplet
         Intent intent = new Intent(context, MediaPlayerService.class);
         intent.putExtra(MEDIA_PATH, media);
         return intent;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        // Perform one-time setup procedures
+
+        // Manage incoming phone calls during playback.
+        // Pause MediaPlayer on incoming call,
+        // Resume on hangup.
+        callStateListener();
+        //ACTION_AUDIO_BECOMING_NOISY -- change in audio outputs -- BroadcastReceiver
+        registerBecomingNoisyReceiver();
+        //Listen for new Audio to play -- BroadcastReceiver
+    }
+
+    private void initMediaSession() {
+        if (mMediaSessionManager != null) return;
+
+        mMediaSessionManager = (MediaSessionManager) getSystemService(Context.MEDIA_SESSION_SERVICE);
+
     }
 
     private void initMediaPlayer() {
@@ -201,13 +237,8 @@ public class MediaPlayerService extends Service implements MediaPlayer.OnComplet
     private boolean requestAudioFocus() {
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         int result = mAudioManager.requestAudioFocus(this, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
-        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-            // focus is gained
-            return true;
-        }
 
-        // cannot gain focus
-        return false;
+        return result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED;
     }
 
     private boolean removeAudioFocus() {
@@ -295,6 +326,13 @@ public class MediaPlayerService extends Service implements MediaPlayer.OnComplet
 
         // remove the audiofocus
         removeAudioFocus();
+
+        // disable the phonestatelistener
+        if (mPhoneStateListener != null) {
+            mTelephonyManager.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
+        }
+
+        unregisterReceiver(becomingNoisyReceiver);
     }
 
     public class LocalBinder extends Binder {
