@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.MediaController;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -18,7 +19,7 @@ import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
 import id.kelongmakassar.kelongmakassar.services.MediaPlayerService;
 
-public class TrackDetailActivity extends AppCompatActivity {
+public class TrackDetailActivity extends AppCompatActivity implements MediaController.MediaPlayerControl {
 
     private static final String SERVICE_STATE = "SERVICE_STATE";
     private static final String TRACK = "id.kelongmakassar.kelongmakassar.ui.track.detail.TrackDetailActivity.TRACK";
@@ -30,6 +31,13 @@ public class TrackDetailActivity extends AppCompatActivity {
     private MediaPlayerService mMediaPlayerService;
     private boolean isServiceBound = false;
     private Track mTrack;
+
+    private final Runnable mUpdateProgressTask = new Runnable() {
+        @Override
+        public void run() {
+
+        }
+    };
 
     private ServiceConnection serviceConnection = new ServiceConnection() {
         @Override
@@ -140,5 +148,60 @@ public class TrackDetailActivity extends AppCompatActivity {
             Intent broadcastIntent = new Intent(Broadcast_PLAY_NEW_AUDIO);
             sendBroadcast(broadcastIntent);
         }
+    }
+
+    @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public int getDuration() {
+        return 0;
+    }
+
+    @Override
+    public int getCurrentPosition() {
+        return 0;
+    }
+
+    @Override
+    public void seekTo(int i) {
+
+    }
+
+    @Override
+    public boolean isPlaying() {
+        return false;
+    }
+
+    @Override
+    public int getBufferPercentage() {
+        return 0;
+    }
+
+    @Override
+    public boolean canPause() {
+        return false;
+    }
+
+    @Override
+    public boolean canSeekBackward() {
+        return false;
+    }
+
+    @Override
+    public boolean canSeekForward() {
+        return false;
+    }
+
+    @Override
+    public int getAudioSessionId() {
+        return 0;
     }
 }

@@ -6,27 +6,29 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:layout_margin="16dp"
+    android:padding="16dp"
+    android:background="@drawable/main_background"
     tools:context="id.kelongmakassar.kelongmakassar.ui.LandingActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="28sp"
-        android:text="@string/app_name" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:src="@drawable/ic_judul" />
 
     <ImageView
         android:id="@+id/image_show_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:src="@android:drawable/ic_menu_help"
-        android:contentDescription="A short description about this application."/>
+        android:src="@drawable/ic_info_kelong"
+        android:contentDescription="@string/desc_app"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,14 +47,27 @@
                 android:id="@+id/layout_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_pull_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_pull_down_menu"/>
 
                 <Button
                     style="@style/MyButton"
                     android:id="@+id/button_kelong"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:minHeight="64dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
                     android:text="@string/label_kelong" />
 
                 <Button
@@ -61,6 +76,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:minHeight="64dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
                     android:text="@string/label_tutorial" />
 
                 <Button
@@ -69,17 +89,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:minHeight="64dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
                     android:text="@string/label_games" />
             </LinearLayout>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/text_help"
-            android:visibility="gone"
+        <ScrollView
+            android:id="@+id/scrollview_help"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#D0D2D1"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/rounded_background_default"
+            android:scrollbars="vertical"
             android:padding="4dp"
-            android:text="Kelong makassar adalah..."/>
+            android:fillViewport="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:lineSpacingExtra="4dp"
+                android:textIsSelectable="true"
+                android:text="@string/text_long_desc_kelong"/>
+        </ScrollView>
     </RelativeLayout>
 </LinearLayout>

@@ -14,6 +14,7 @@ import butterknife.ButterKnife;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
 import id.kelongmakassar.kelongmakassar.ui.track.detail.TrackDetailActivity;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class TrackListActivity extends AppCompatActivity implements TrackListMvpView {
 
@@ -37,6 +38,11 @@ public class TrackListActivity extends AppCompatActivity implements TrackListMvp
 
         initAdapters();
         mPresenter.loadTracks();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void initAdapters() {

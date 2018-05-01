@@ -1,12 +1,13 @@
 package id.kelongmakassar.kelongmakassar.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.ScrollView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -14,10 +15,11 @@ import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.ui.track.list.TrackListActivity;
 import id.kelongmakassar.kelongmakassar.ui.tutorial.TutorialActivity;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class LandingActivity extends AppCompatActivity {
 
-    @BindView(R.id.text_help) TextView mHelpText;
+    @BindView(R.id.scrollview_help) ScrollView mHelpScrollView;
     @BindView(R.id.image_show_help) ImageView mShowHelpImageView;
     @BindView(R.id.layout_buttons) LinearLayout mButtonsLayout;
 
@@ -33,18 +35,24 @@ public class LandingActivity extends AppCompatActivity {
         initLayout();
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     private void initLayout() {
         isHelpShown = false;
         isMenuShown = false;
 
-        mHelpText.setVisibility(View.GONE);
+        mHelpScrollView.setVisibility(View.GONE);
         mButtonsLayout.setVisibility(View.GONE);
     }
 
     @OnClick(R.id.image_show_help)
     void onHelpClick() {
         isHelpShown = !isHelpShown;
-        mHelpText.setVisibility(isHelpShown ? View.VISIBLE : View.GONE);
+        mHelpScrollView.setVisibility(isHelpShown ? View.VISIBLE : View.GONE);
+        mShowHelpImageView.setImageResource(isHelpShown ? R.drawable.ic_info_kelong_selected : R.drawable.ic_info_kelong);
     }
 
     @OnClick(R.id.button_toggle_menu)

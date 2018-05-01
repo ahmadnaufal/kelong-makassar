@@ -13,7 +13,8 @@
         android:layout_weight="1"
         android:layout_margin="8dp"
         android:text="Track 1"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary" />
 
     <ImageView
         android:id="@+id/image_next"
@@ -21,5 +22,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:src="@drawable/ic_action_next"
-        android:tint="@color/colorPrimaryDark" />
+        android:tint="@color/colorPrimary" />
 </LinearLayout>
