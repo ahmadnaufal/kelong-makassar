@@ -8,6 +8,7 @@ import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -112,6 +113,24 @@ public class TrackDetailActivity extends AppCompatActivity {
     @OnClick(R.id.image_back)
     void onBackClick() {
         super.onBackPressed();
+    }
+
+    @OnClick(R.id.button_lyrics)
+    void onLyricsClick() {
+        Fragment fragment = TrackLyricsFragment.newInstance(mTrack);
+        getSupportFragmentManager().beginTransaction().replace(R.id.layout_buttons, fragment).addToBackStack(null).commit();
+    }
+
+    @OnClick(R.id.button_meaning)
+    void onMeaningClick() {
+        Fragment fragment = TrackMeaningFragment.newInstance(mTrack);
+        getSupportFragmentManager().beginTransaction().replace(R.id.layout_buttons, fragment).addToBackStack(null).commit();
+    }
+
+    @OnClick(R.id.button_notation)
+    void onNotationClick() {
+        Fragment fragment = TrackNotationFragment.newInstance(mTrack);
+        getSupportFragmentManager().beginTransaction().replace(R.id.layout_buttons, fragment).addToBackStack(null).commit();
     }
 
     @Override

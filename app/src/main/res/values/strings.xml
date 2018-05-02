@@ -5,11 +5,11 @@
     <string name="label_kelong">Yuk, dengar Kelong Makassar!</string>
     <string name="label_tutorial">Yuk, mengenal khas Kelong Makassar!</string>
     <string name="label_games">Yuk bermain!</string>
-    
+
     <string name="label_lyrics">Lirik &amp; Arti</string>
     <string name="label_music_notes">Not Angka</string>
     <string name="label_music_meaning">Makna</string>
-    
+
     <string name="title_tracks">Playlist</string>
     <string name="title_track">Track 1</string>
     <string name="title_tutorial">Tokko-Tokkona</string>
@@ -18,4 +18,7 @@
     <string name="stop">Stop</string>
     <string name="desc_app">A short description about this application.</string>
     <string name="text_long_desc_kelong">Kelong Makassar adalah kumpulan syair-syair dalam puisi yang telah mengakar pada masyarakat Makassar dan dikembangkan menjadi kumpulan lagu-lagu daerah dengan deratan nada-nada dan irama tertentu. Kelong Makassar atau Kelong Tau riolo (lagu orang dulu) adalah nyanyian yang dulunya diciptakan oleh penyair keturunan tonghoa bernama Ho Eng Dji (HED) yang lahir di Kassiq Keboq (kampong cina) pada tanggal 27 juli 1906. Perjalanannya dengan membentuk kelompok musik daerah dan berganti-ganti anggota untuk mempopulerkan lagu-lagunya tersebut diperjuangkan bersama kerabat-kerabatnya temasuk anaknya sendiri yang bernama Borahima Sinyo, hingga Presiden Soekarno pun berkenan menerimanya di Istana Negara pada tanggal 11 september 1953.Bukan hanya membicarakan perkembangan kesenian saja, HED juga mengutarakan harapannya agar kemasyarakatan antara orang tionghoa dan pribumi (Indonesia) kembali menjalin hubungan yang baik.\n\nKelong-kelong Makassar saat ini termasuk pewarisan budaya lokal yang patut dilestarikan serta dijaga keberadaanya, karena niai-nilai didalamnya banyak terkandung nasehat-nasehat tentang kehidupan dunia akhirat termasuk cinta dan kasih sayang. Adapun fungsi kelong Makassar antara lain seabagi media komunikasi, penyampaian tata cara bergaul, nyanyiannya berisi doa dan harapan kepada Tuhan Yang Maha Esa dan sebagai hiburan, Kelong juga termasuk karya sastra Bugis-Makassar yang terbilang sangat tua. Bagi masyarakat Makassar, kelong mendapat tempat tersendiri karena segala perasaan suka dan duka yang dialami masyarakatnya yang disampaikan melalui kelong.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
