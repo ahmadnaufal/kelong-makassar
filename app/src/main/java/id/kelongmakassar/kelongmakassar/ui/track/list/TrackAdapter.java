@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -59,6 +60,7 @@ public class TrackAdapter extends RecyclerView.Adapter<TrackAdapter.Holder> {
 
         @BindView(R.id.text_track_title) TextView mTrackTitleText;
         @BindView(R.id.image_next) ImageView mNextImageView;
+        @BindView(R.id.layout_track) LinearLayout mTrackLayout;
 
         private Track mTrack;
 
@@ -71,7 +73,7 @@ public class TrackAdapter extends RecyclerView.Adapter<TrackAdapter.Holder> {
             mTrack = track;
 
             mTrackTitleText.setText(mTrack.getTitle());
-            mNextImageView.setOnClickListener(new View.OnClickListener() {
+            mTrackLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     listener.onTrackSelected(mTrack);

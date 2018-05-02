@@ -12,6 +12,8 @@
     
     <string name="title_tracks">Playlist</string>
     <string name="title_track">Track 1</string>
+    <string name="title_tutorial">Tokko-Tokkona</string>
+    <string name="text_tutorial_desc">Istilah-istilah dalam bernyanyi Khas Kelong Makassar</string>
     <string name="play">Play</string>
     <string name="stop">Stop</string>
     <string name="desc_app">A short description about this application.</string>

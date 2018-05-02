@@ -16,6 +16,7 @@
         android:layout_marginBottom="16dp">
 
         <ImageView
+            android:id="@+id/image_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_action_back"
@@ -46,12 +47,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             
-            <Button
+            <ImageView
                 android:id="@+id/button_control"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/play" />
+                android:src="@drawable/ic_play" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,6 +76,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="0.15"
+                        android:textColor="@color/colorPrimary"
                         android:gravity="start" />
 
                     <TextView
@@ -83,6 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="-1.05"
+                        android:textColor="@color/colorPrimary"
                         android:gravity="end" />
                 </LinearLayout>
             </LinearLayout>
@@ -100,6 +103,10 @@
                 android:id="@+id/button_kelong"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
                 android:text="@string/label_lyrics" />
 
             <Button
@@ -107,6 +114,10 @@
                 android:id="@+id/button_tutorial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/label_music_meaning" />
 
@@ -116,6 +127,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
                 android:text="@string/label_music_notes" />
         </LinearLayout>
     </LinearLayout>

@@ -14,7 +14,7 @@ public class TrackListPresenter extends Presenter<TrackListMvpView> {
 
     private final DataManager mDataManager;
 
-    public TrackListPresenter(TrackListMvpView view) {
+    TrackListPresenter(TrackListMvpView view) {
         super(view);
         mDataManager = new DataManager();
     }

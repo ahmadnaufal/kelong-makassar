@@ -11,6 +11,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
 import id.kelongmakassar.kelongmakassar.ui.track.detail.TrackDetailActivity;
@@ -58,6 +59,11 @@ public class TrackListActivity extends AppCompatActivity implements TrackListMvp
                 startActivity(intent);
             }
         });
+    }
+
+    @OnClick(R.id.image_back)
+    void onBackClick() {
+        super.onBackPressed();
     }
 
     @Override

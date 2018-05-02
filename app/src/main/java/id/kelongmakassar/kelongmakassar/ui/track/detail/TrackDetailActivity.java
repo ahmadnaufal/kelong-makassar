@@ -11,15 +11,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.MediaController;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
 import id.kelongmakassar.kelongmakassar.services.MediaPlayerService;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class TrackDetailActivity extends AppCompatActivity implements MediaController.MediaPlayerControl {
+public class TrackDetailActivity extends AppCompatActivity {
 
     private static final String SERVICE_STATE = "SERVICE_STATE";
     private static final String TRACK = "id.kelongmakassar.kelongmakassar.ui.track.detail.TrackDetailActivity.TRACK";
@@ -27,6 +30,7 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaContr
     public static final String Broadcast_PLAY_NEW_AUDIO = "id.kelongmakassar.kelongmakassar.PlayNewAudio";
 
     @BindView(R.id.seekbar_status_song) SeekBar statusSongSeekBar;
+    @BindView(R.id.text_song_title) TextView songTitleTextView;
 
     private MediaPlayerService mMediaPlayerService;
     private boolean isServiceBound = false;
@@ -66,11 +70,16 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaContr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_detail);
+        ButterKnife.bind(this);
 
         if (savedInstanceState != null) {
             mTrack = savedInstanceState.getParcelable(TRACK);
         } else {
             mTrack = getIntent().getParcelableExtra(TRACK);
+        }
+
+        if (mTrack != null) {
+            songTitleTextView.setText(mTrack.getTitle());
         }
 
         statusSongSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -89,13 +98,21 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaContr
 
             }
         });
+    }
 
-        onPlayClick();
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @OnClick(R.id.button_control)
     void onMediaControlClick() {
+        onPlayClick();
+    }
 
+    @OnClick(R.id.image_back)
+    void onBackClick() {
+        super.onBackPressed();
     }
 
     @Override
@@ -148,60 +165,5 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaContr
             Intent broadcastIntent = new Intent(Broadcast_PLAY_NEW_AUDIO);
             sendBroadcast(broadcastIntent);
         }
-    }
-
-    @Override
-    public void start() {
-
-    }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public int getDuration() {
-        return 0;
-    }
-
-    @Override
-    public int getCurrentPosition() {
-        return 0;
-    }
-
-    @Override
-    public void seekTo(int i) {
-
-    }
-
-    @Override
-    public boolean isPlaying() {
-        return false;
-    }
-
-    @Override
-    public int getBufferPercentage() {
-        return 0;
-    }
-
-    @Override
-    public boolean canPause() {
-        return false;
-    }
-
-    @Override
-    public boolean canSeekBackward() {
-        return false;
-    }
-
-    @Override
-    public boolean canSeekForward() {
-        return false;
-    }
-
-    @Override
-    public int getAudioSessionId() {
-        return 0;
     }
 }

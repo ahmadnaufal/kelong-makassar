@@ -8,13 +8,16 @@ import android.os.Parcelable;
  */
 
 public class Track implements Parcelable {
-
+    private String lyricsPath;
+    private String meaningPath;
     private String title;
     private int resId;
 
-    public Track(int resId, String title) {
+    public Track(int resId, String title, String lyricsPath, String meaningPath) {
         this.resId = resId;
         this.title = title;
+        this.lyricsPath = lyricsPath;
+        this.meaningPath = meaningPath;
     }
 
     public int getResId() {
@@ -33,6 +36,22 @@ public class Track implements Parcelable {
         this.title = title;
     }
 
+    public String getLyricsPath() {
+        return lyricsPath;
+    }
+
+    public void setLyricsPath(String lyricsPath) {
+        this.lyricsPath = lyricsPath;
+    }
+
+    public String getMeaningPath() {
+        return meaningPath;
+    }
+
+    public void setMeaningPath(String meaningPath) {
+        this.meaningPath = meaningPath;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -40,6 +59,8 @@ public class Track implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(lyricsPath);
+        parcel.writeString(meaningPath);
         parcel.writeString(title);
         parcel.writeInt(resId);
     }
@@ -57,6 +78,8 @@ public class Track implements Parcelable {
     };
 
     private Track(Parcel in) {
+        lyricsPath = in.readString();
+        meaningPath = in.readString();
         title = in.readString();
         resId = in.readInt();
     }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import butterknife.ButterKnife;
 import id.kelongmakassar.kelongmakassar.R;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class TutorialActivity extends AppCompatActivity {
 
@@ -20,5 +21,10 @@ public class TutorialActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial);
         ButterKnife.bind(this);
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }
