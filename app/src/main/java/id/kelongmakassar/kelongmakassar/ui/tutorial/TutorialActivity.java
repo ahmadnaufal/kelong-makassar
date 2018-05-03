@@ -14,8 +14,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Tutorial;
-import id.kelongmakassar.kelongmakassar.ui.track.list.TrackAdapter;
-import id.kelongmakassar.kelongmakassar.ui.track.list.TrackListPresenter;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class TutorialActivity extends AppCompatActivity implements TutorialMvpView {

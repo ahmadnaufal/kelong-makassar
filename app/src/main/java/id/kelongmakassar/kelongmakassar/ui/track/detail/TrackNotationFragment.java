@@ -7,7 +7,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
@@ -22,6 +24,8 @@ public class TrackNotationFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String TRACK = "TrackNotationFragment.TRACK";
 
+    @BindView(R.id.image_notation) ImageView notationImageView;
+
     private Track mTrack;
 
     public TrackNotationFragment() {
@@ -35,7 +39,6 @@ public class TrackNotationFragment extends Fragment {
      * @param track The track item
      * @return A new instance of fragment TrackNotationFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static TrackNotationFragment newInstance(Track track) {
         TrackNotationFragment fragment = new TrackNotationFragment();
         Bundle args = new Bundle();
@@ -59,8 +62,12 @@ public class TrackNotationFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_track_notation, container, false);
         ButterKnife.bind(this, rootView);
 
+        initLayout();
 
         return rootView;
     }
 
+    private void initLayout() {
+        notationImageView.setImageResource(mTrack.getScreenshotId());
+    }
 }

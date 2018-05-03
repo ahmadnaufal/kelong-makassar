@@ -1,11 +1,9 @@
 package id.kelongmakassar.kelongmakassar.ui.track.detail;
 
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -17,14 +15,13 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.io.IOException;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.Track;
+import id.kelongmakassar.kelongmakassar.util.Utility;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class TrackDetailActivity extends AppCompatActivity implements MediaPlayer.OnCompletionListener,
@@ -131,23 +128,12 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaPlaye
         mMediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         try {
             // set the datasource to the mMediaPath attribute
-            mMediaPlayer.setDataSource(this, resolveLocalMediaResourceUri(mTrack.getResId()));
+            mMediaPlayer.setDataSource(this, Utility.resolveLocalMediaResourceUri(mTrack.getResId(), this));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         mMediaPlayer.prepareAsync();
-    }
-
-    private Uri resolveLocalMediaResourceUri(int resId) {
-        Uri uri = new Uri.Builder()
-                .scheme(ContentResolver.SCHEME_ANDROID_RESOURCE)
-                .authority(getResources().getResourcePackageName(resId))
-                .appendPath(getResources().getResourceTypeName(resId))
-                .appendPath(getResources().getResourceEntryName(resId))
-                .build();
-
-        return uri;
     }
 
     @Override

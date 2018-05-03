@@ -11,13 +11,23 @@ public class Track implements Parcelable {
     private String lyricsPath;
     private String meaningPath;
     private String title;
+    private int screenshotId;
     private int resId;
 
-    public Track(int resId, String title, String lyricsPath, String meaningPath) {
+    public Track(int resId, String title, String lyricsPath, String meaningPath, int screenshotId) {
         this.resId = resId;
         this.title = title;
         this.lyricsPath = lyricsPath;
         this.meaningPath = meaningPath;
+        this.screenshotId = screenshotId;
+    }
+
+    public int getScreenshotId() {
+        return screenshotId;
+    }
+
+    public void setScreenshotId(int screenshotId) {
+        this.screenshotId = screenshotId;
     }
 
     public int getResId() {
@@ -62,6 +72,7 @@ public class Track implements Parcelable {
         parcel.writeString(lyricsPath);
         parcel.writeString(meaningPath);
         parcel.writeString(title);
+        parcel.writeInt(screenshotId);
         parcel.writeInt(resId);
     }
 
@@ -81,6 +92,7 @@ public class Track implements Parcelable {
         lyricsPath = in.readString();
         meaningPath = in.readString();
         title = in.readString();
+        screenshotId = in.readInt();
         resId = in.readInt();
     }
 }
