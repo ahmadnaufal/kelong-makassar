@@ -181,14 +181,14 @@ public class MediaPlayerService extends Service implements MediaPlayer.OnComplet
         }
     }
 
-    private void pauseMedia() {
+    public void pauseMedia() {
         if (mMediaPlayer.isPlaying()) {
             mMediaPlayer.pause();
             resumePosition = mMediaPlayer.getCurrentPosition();
         }
     }
 
-    private void resumeMedia() {
+    public void resumeMedia() {
         if (!mMediaPlayer.isPlaying()) {
             mMediaPlayer.seekTo(resumePosition);
             mMediaPlayer.start();
