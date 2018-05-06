@@ -24,6 +24,12 @@ public class DataManager {
         tracks.add(new Track(R.raw.ilang_kebo, "Ilang Kebo", "lyrics/IlangKebo.txt", "meanings/IlangKebo.txt", R.drawable.ilang_kebo));
         tracks.add(new Track(R.raw.mas_bangun, "Mas Bangun", "lyrics/MasBangun.txt", "meanings/MasBangun.txt", R.drawable.mas_bangun));
 
+        // TODO soon to be added
+        tracks.add(new Track(R.raw.dongang_dongang, "Dongang-Dongang", "lyrics/DongangDongang.txt", "meanings/DongangDongang.txt", 0));
+        tracks.add(new Track(R.raw.subang_kacayya, "Subang Kacayya", "lyrics/SubangKacayya.txt", "meanings/SubangKacayya.txt", 0));
+        tracks.add(new Track(R.raw.sailong, "Sailong", "lyrics/Sailong.txt", "meanings/Sailong.txt", 0));
+        tracks.add(new Track(R.raw.marencong_rencong, "Ma'rencong Rencong", "lyrics/MarencongRencong.txt", "meanings/MarencongRencong.txt", 0));
+
         return tracks;
     }
 
