@@ -35,10 +35,10 @@ public class DataManager {
 
     public List<Tutorial> getTutorials() {
         ArrayList<Tutorial> tutorials = new ArrayList<>();
-        tutorials.add(new Tutorial("Besoq-Besoq Na", R.raw.tut_1, "notations/tut_1.txt"));
-        tutorials.add(new Tutorial("Lekko-Lekko Na", R.raw.tut_2, "notations/tut_2.txt"));
-        tutorials.add(new Tutorial("Maqdere Saqra", R.raw.tut_3, "notations/tut_3.txt"));
-        tutorials.add(new Tutorial("Belo-Belona", R.raw.tut_4, "notations/tut_4.txt"));
+        tutorials.add(new Tutorial("Besoq-Besoq Na", "Istilah dalam menyeret nada", R.raw.tut_1, "notations/tut_1.txt"));
+        tutorials.add(new Tutorial("Lekko-Lekko Na", "Istilah Cengkok daerah Makassar", R.raw.tut_2, "notations/tut_2.txt"));
+        tutorials.add(new Tutorial("Mebbereq Saqra", "Istilah vibra Kelong Makasssar", R.raw.tut_3, "notations/tut_3.txt"));
+        tutorials.add(new Tutorial("Belo-Belona", "Penambahan kata dalam kalimat lagu", R.raw.tut_4, "notations/tut_4.txt"));
 
         return tutorials;
     }

@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,6 +28,9 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
         MediaPlayer.OnInfoListener, MediaPlayer.OnBufferingUpdateListener, AudioManager.OnAudioFocusChangeListener {
 
     @BindView(R.id.recyclerview_tutorial_list) RecyclerView tutorialListRecyclerView;
+    @BindView(R.id.layout_tutorial_example) LinearLayout tutorialExampleLayout;
+
+    private boolean isExampleShown = false;
 
     private TutorialAdapter mTutorialAdapter;
     private TutorialPresenter mPresenter;
@@ -68,6 +73,12 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
         super.onBackPressed();
     }
 
+    @OnClick(R.id.button_examples)
+    void onExampleClick() {
+        isExampleShown = !isExampleShown;
+        tutorialExampleLayout.setVisibility(isExampleShown ? View.VISIBLE : View.GONE);
+    }
+
     private void initLayout() {
         mTutorialAdapter = new TutorialAdapter(this);
         tutorialListRecyclerView.setAdapter(mTutorialAdapter);
@@ -91,6 +102,9 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
                 }
             }
         });
+
+        // hide button layout
+        tutorialExampleLayout.setVisibility(View.GONE);
     }
 
     private void playMedia() {

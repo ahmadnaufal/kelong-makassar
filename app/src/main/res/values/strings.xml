@@ -3,12 +3,16 @@
 
     <string name="label_menu">Menu</string>
     <string name="label_kelong">Yuk, dengar Kelong Makassar!</string>
-    <string name="label_tutorial">Yuk, mengenal khas Kelong Makassar!</string>
+    <string name="label_tutorial">Yuk, belajar bernyanyi Kelong Makassar!</string>
     <string name="label_games">Yuk bermain!</string>
 
     <string name="label_lyrics">Lirik &amp; Arti</string>
     <string name="label_music_notes">Not Angka</string>
     <string name="label_music_meaning">Makna</string>
+
+    <string name="label_tutorial_example">Ayo, bernyanyi!</string>
+    <string name="label_atiraja_vocal">Ati Raja dengan vokal</string>
+    <string name="label_atiraja_no_vocal">Ati Raja tanpa vokal</string>
 
     <string name="title_tracks">Playlist</string>
     <string name="title_track">Track 1</string>
@@ -23,4 +27,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="text_numbering">%1$d.</string>
+    <string name="text_tutorial_item_description">(%1$s)</string>
 </resources>

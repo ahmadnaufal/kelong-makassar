@@ -22,7 +22,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
     private List<Tutorial> mTutorialList;
     private OnTutorialInteractionListener mListener;
 
-    public TutorialAdapter(Context mContext) {
+    TutorialAdapter(Context mContext) {
         this.mContext = mContext;
         this.mTutorialList = new ArrayList<>();
     }
@@ -57,6 +57,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
         @BindView(R.id.text_number) TextView numberTextView;
         @BindView(R.id.text_tutorial_name) TextView tutorialNameTextView;
         @BindView(R.id.button_play) ImageView playImageView;
+        @BindView(R.id.text_tutorial_desc) TextView tutorialDescTextView;
 
         Holder(View itemView) {
             super(itemView);
@@ -66,6 +67,8 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
         void bind(int position, final Tutorial tutorial, Context context, final OnTutorialInteractionListener listener) {
             numberTextView.setText(context.getString(R.string.text_numbering, position));
             tutorialNameTextView.setText(tutorial.getName());
+            tutorialDescTextView.setText(context.getString(R.string.text_tutorial_item_description, tutorial.getDescription()));
+
             playImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
