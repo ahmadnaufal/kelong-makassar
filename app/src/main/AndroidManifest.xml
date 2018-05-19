@@ -55,6 +55,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.LandingActivity" />
         </activity>
+        <activity
+            android:name=".ui.tutorial.TutorialExampleActivity"
+            android:label="@string/label_tutorial_example"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.tutorial.TutorialActivity" />
+        </activity>
+        <activity
+            android:name=".ui.tutorial.InfoKelongActivity"
+            android:label="@string/label_info_kelong_short"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.tutorial.TutorialExampleActivity" />
+        </activity>
 
         <service android:name=".services.MediaPlayerService" />
     </application>

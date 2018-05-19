@@ -79,6 +79,18 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
         tutorialExampleLayout.setVisibility(isExampleShown ? View.VISIBLE : View.GONE);
     }
 
+    @OnClick(R.id.button_atiraja_no_vocal)
+    void onAtirajaNoVocalClick() {
+        Intent intent = TutorialExampleActivity.getStartIntent(this);
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.button_atiraja_vocal)
+    void onAtirajaVocalClick() {
+        Intent intent = TutorialExampleActivity.getStartIntent(this);
+        startActivity(intent);
+    }
+
     private void initLayout() {
         mTutorialAdapter = new TutorialAdapter(this);
         tutorialListRecyclerView.setAdapter(mTutorialAdapter);

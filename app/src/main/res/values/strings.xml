@@ -13,6 +13,8 @@
     <string name="label_tutorial_example">Ayo, bernyanyi!</string>
     <string name="label_atiraja_vocal">Ati Raja dengan vokal</string>
     <string name="label_atiraja_no_vocal">Ati Raja tanpa vokal</string>
+    <string name="label_info_kelong">Info Kelong Makassar</string>
+    <string name="label_info_kelong_short">Info Kelong</string>
 
     <string name="title_tracks">Playlist</string>
     <string name="title_track">Track 1</string>

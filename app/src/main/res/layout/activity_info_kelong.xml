@@ -6,7 +6,7 @@
     android:padding="16dp"
     android:background="@drawable/track_background"
     android:orientation="vertical"
-    tools:context=".ui.games.GamesActivity">
+    tools:context=".ui.tutorial.InfoKelongActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,11 +22,11 @@
             android:tint="@color/colorPrimary" />
 
         <TextView
-            android:id="@+id/text_song_title"
+            android:id="@+id/text_title"
             fontPath="fonts/BackToBlackDemo.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_games"
+            android:text="@string/label_info_kelong_short"
             android:textColor="@color/colorPrimary"
             android:textSize="32sp"
             android:textAlignment="center"

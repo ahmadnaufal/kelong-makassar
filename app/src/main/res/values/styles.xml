@@ -21,4 +21,12 @@
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="fontPath">fonts/ArcherBold.otf</item>
     </style>
+
+    <style name="MyButton.Small" parent="MyButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
 </resources>

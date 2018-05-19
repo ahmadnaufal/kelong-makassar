@@ -69,27 +69,27 @@
                 android:id="@+id/layout_tutorial_example"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/ic_pull_down_menu" />
 
                 <Button
-                    style="@style/MyButton"
+                    style="@style/MyButton.Small"
                     android:id="@+id/button_atiraja_vocal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/label_atiraja_vocal" />
 
                 <Button
-                    style="@style/MyButton"
+                    style="@style/MyButton.Small"
                     android:id="@+id/button_atiraja_no_vocal"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/label_atiraja_no_vocal" />
