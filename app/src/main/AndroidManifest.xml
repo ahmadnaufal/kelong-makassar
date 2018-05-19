@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="id.kelongmakassar.kelongmakassar">
 
     <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
@@ -25,34 +25,38 @@
         </activity>
         <activity
             android:name=".ui.track.list.TrackListActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/title_tracks">
-
+            android:label="@string/title_tracks"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.LandingActivity" />
         </activity>
         <activity
             android:name=".ui.track.detail.TrackDetailActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/title_track">
-
+            android:label="@string/title_track"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.track.detail.TrackDetailActivity" />
         </activity>
         <activity
             android:name=".ui.tutorial.TutorialActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:label="@string/label_tutorial">
-
+            android:label="@string/label_tutorial"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.LandingActivity" />
+        </activity>
+        <activity
+            android:name=".ui.games.GamesActivity"
+            android:label="@string/label_games"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.LandingActivity" />
         </activity>
 
-        <service
-            android:name=".services.MediaPlayerService" />
+        <service android:name=".services.MediaPlayerService" />
     </application>
 
 </manifest>
