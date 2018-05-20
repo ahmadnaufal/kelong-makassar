@@ -87,7 +87,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_pull_down_menu"/>
+                    android:src="@drawable/ic_pull_up_menu"/>
             </LinearLayout>
 
             <ScrollView
