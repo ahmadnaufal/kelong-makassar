@@ -33,4 +33,9 @@ public class InfoKelongActivity extends AppCompatActivity {
     void onBackClick() {
         super.onBackPressed();
     }
+
+    @OnClick(R.id.image_play_media)
+    void onMediaClick() {
+        // play music
+    }
 }
