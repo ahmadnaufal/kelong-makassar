@@ -1,21 +1,19 @@
 package id.kelongmakassar.kelongmakassar.data.model;
 
-import android.os.Parcelable;
+public class TextQuestion implements Question {
 
-public class AudioGuessQuestion implements Question {
-
-    private int resId;
+    private String question;
     private String[] answerList;
     private int correctAnswerIdx;
 
-    public AudioGuessQuestion(int resId, String[] answerList, int correctAnswerIdx) {
-        this.resId = resId;
+    public TextQuestion(String question, String[] answerList, int correctAnswerIdx) {
+        this.question = question;
         this.answerList = answerList;
         this.correctAnswerIdx = correctAnswerIdx;
     }
 
-    public int getResId() {
-        return resId;
+    public String getQuestion() {
+        return question;
     }
 
     public String[] getAnswerList() {
@@ -25,5 +23,4 @@ public class AudioGuessQuestion implements Question {
     public int getCorrectAnswerIdx() {
         return correctAnswerIdx;
     }
-
 }
