@@ -26,51 +26,38 @@
         <activity
             android:name=".ui.track.list.TrackListActivity"
             android:label="@string/title_tracks"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.LandingActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.LandingActivity" />
         <activity
             android:name=".ui.track.detail.TrackDetailActivity"
             android:label="@string/title_track"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.track.detail.TrackDetailActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.track.list.TrackListActivity" />
         <activity
             android:name=".ui.tutorial.TutorialActivity"
             android:label="@string/label_tutorial"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.LandingActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.LandingActivity" />
         <activity
             android:name=".ui.games.GamesActivity"
             android:label="@string/label_games"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.LandingActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.LandingActivity" />
         <activity
             android:name=".ui.tutorial.TutorialExampleActivity"
             android:label="@string/label_tutorial_example"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.tutorial.TutorialActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.tutorial.TutorialActivity" />
         <activity
             android:name=".ui.tutorial.InfoKelongActivity"
             android:label="@string/label_info_kelong_short"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.tutorial.TutorialExampleActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.tutorial.TutorialExampleActivity" />
+        <activity
+            android:name=".ui.games.GamesScoreActivity"
+            android:label="@string/label_games"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.games.GamesActivity" />
 
         <service android:name=".services.MediaPlayerService" />
     </application>

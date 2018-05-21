@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.jsibbold.zoomage.ZoomageView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.kelongmakassar.kelongmakassar.R;
@@ -24,7 +26,7 @@ public class TrackNotationFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String TRACK = "TrackNotationFragment.TRACK";
 
-    @BindView(R.id.image_notation) ImageView notationImageView;
+    @BindView(R.id.image_notation) ZoomageView notationImageView;
 
     private Track mTrack;
 
