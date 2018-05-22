@@ -12,6 +12,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class GamesActivity extends AppCompatActivity {
 
+    private int mScore;
+
     public static Intent getStartIntent(Context context) {
         Intent intent = new Intent(context, GamesActivity.class);
         return intent;
@@ -22,6 +24,9 @@ public class GamesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_games);
         ButterKnife.bind(this);
+
+        mScore = 0;
+        // generate quiz by factory
     }
 
     @Override
@@ -32,5 +37,13 @@ public class GamesActivity extends AppCompatActivity {
     @OnClick(R.id.image_back)
     void onBackClick() {
         super.onBackPressed();
+    }
+
+    // called if user has finished the quiz
+    private void onFinish() {
+        Intent intent = GamesScoreActivity.getStartIntent(this, mScore);
+        startActivity(intent);
+
+        finish();
     }
 }

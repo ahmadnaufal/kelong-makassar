@@ -1,35 +1,40 @@
 package id.kelongmakassar.kelongmakassar.ui.games;
 
 import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
-import id.kelongmakassar.kelongmakassar.data.model.AudioGuessQuestion;
+import id.kelongmakassar.kelongmakassar.data.model.TextQuestion;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link AudioGuessGameFragment.OnAudioGuessListener} interface
+ * {@link TextGameFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link AudioGuessGameFragment#newInstance} factory method to
+ * Use the {@link TextGameFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class AudioGuessGameFragment extends Fragment {
+public class TextGameFragment extends Fragment {
+
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_AUDIO_GUESS_QUESTION = "AUDIO_GUESS_QUESTION";
+    private static final String ARG_TEXT_QUESTION = "TEXT_QUESTION";
 
-    private AudioGuessQuestion mQuestion;
+    @BindView(R.id.text_question_title) TextView questionTitleTextView;
 
-    private OnAudioGuessListener mListener;
+    private TextQuestion mQuestion;
 
-    public AudioGuessGameFragment() {
+    private OnFragmentInteractionListener mListener;
+
+    public TextGameFragment() {
         // Required empty public constructor
     }
 
@@ -37,13 +42,13 @@ public class AudioGuessGameFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param question The question.
-     * @return A new instance of fragment AudioGuessGameFragment.
+     * @param question The text question.
+     * @return A new instance of fragment TextGameFragment.
      */
-    public static AudioGuessGameFragment newInstance(AudioGuessQuestion question) {
-        AudioGuessGameFragment fragment = new AudioGuessGameFragment();
+    public static TextGameFragment newInstance(TextQuestion question) {
+        TextGameFragment fragment = new TextGameFragment();
         Bundle args = new Bundle();
-        args.putParcelable(ARG_AUDIO_GUESS_QUESTION, question);
+        args.putParcelable(ARG_TEXT_QUESTION, question);
         fragment.setArguments(args);
         return fragment;
     }
@@ -52,7 +57,7 @@ public class AudioGuessGameFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mQuestion = getArguments().getParcelable(ARG_AUDIO_GUESS_QUESTION);
+            mQuestion = getArguments().getParcelable(ARG_TEXT_QUESTION);
         }
     }
 
@@ -60,33 +65,32 @@ public class AudioGuessGameFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_audio_guess_game, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_text_game, container, false);
         ButterKnife.bind(this, rootView);
 
-        initLayoutWithQuestion();
+        initLayout();
 
         return rootView;
     }
 
-    private void initLayoutWithQuestion() {
-        String[] answers = mQuestion.getAnswerList();
+    private void initLayout() {
+        questionTitleTextView.setText(mQuestion.getQuestion());
     }
 
-    @OnClick(R.id.image_play_media)
-    void onButtonPressed() {
+    public void onButtonPressed(Uri uri) {
         if (mListener != null) {
-            mListener.onPlayButtonPressed(mQuestion.getResId());
+            mListener.onFragmentInteraction(uri);
         }
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof OnAudioGuessListener) {
-            mListener = (OnAudioGuessListener) context;
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
         } else {
             throw new RuntimeException(context.toString()
-                    + " must implement OnAudioGuessListener");
+                    + " must implement OnFragmentInteractionListener");
         }
     }
 
@@ -106,7 +110,7 @@ public class AudioGuessGameFragment extends Fragment {
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
      */
-    public interface OnAudioGuessListener {
-        void onPlayButtonPressed(int resId);
+    public interface OnFragmentInteractionListener {
+        void onFragmentInteraction(Uri uri);
     }
 }

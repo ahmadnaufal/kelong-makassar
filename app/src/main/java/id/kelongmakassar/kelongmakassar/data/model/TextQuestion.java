@@ -1,6 +1,9 @@
 package id.kelongmakassar.kelongmakassar.data.model;
 
-public class TextQuestion implements Question {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class TextQuestion implements Question, Parcelable {
 
     private String question;
     private String[] answerList;
@@ -22,5 +25,35 @@ public class TextQuestion implements Question {
 
     public int getCorrectAnswerIdx() {
         return correctAnswerIdx;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(question);
+        parcel.writeStringArray(answerList);
+        parcel.writeInt(correctAnswerIdx);
+    }
+
+    public static final Parcelable.Creator<TextQuestion> CREATOR = new Parcelable.Creator<TextQuestion>() {
+        @Override
+        public TextQuestion createFromParcel(Parcel parcel) {
+            return new TextQuestion(parcel);
+        }
+
+        @Override
+        public TextQuestion[] newArray(int size) {
+            return new TextQuestion[size];
+        }
+    };
+
+    private TextQuestion(Parcel in) {
+        question = in.readString();
+        in.readStringArray(answerList);
+        correctAnswerIdx = in.readInt();
     }
 }
