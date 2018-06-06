@@ -1,40 +1,25 @@
-Lirik Lagu
+<b>Seqre seqre-ji Batara baule</b>
+<i>Hanya satu Tuhan”atau “ Hanya kepada Tuhan</i>
+<b>‘Ati raja’</b>
+<i>Ati raja</i>
+<b>Na ki jai pangandro-i baule</b>
+<i>kita banyak bermohon kepada-Nya”</i>
+<b>Rajale Alla kereami njo</b>
+<i>yang mana”</i>
+<b>‘Ati ati ati raja’</b>
+<i>Ati ati ati raja</i>
+<b>Na Batara tang-kella-i baule</b>
+<i>Yang tak diridhoi oleh Tuhan”</i>
 
-Seqre seqre-ji Batara baule
-‘Ati raja’
-Na ki jai pangandro-i baule
-Rajale Alla kereami njo
-‘Ati ati ati raja’
-Na Batara tang-kella-i baule
-
-Manna mo ki minasa -i baule
-‘Ati raja’
-Ni-panaiq ri-palaq-taq ri kodong
-Rajale Alla taq-balle tonji
-‘Ati ati ati raja’
-Na tarima  papalaq-na baule
-
-
-Arti Lagu
-
-‘satu satu hanya Tuhan penegas’
-“Hanya satu Tuhan”atau “ Hanya kepada Tuhan”
-“Ati raja”
-‘Adapun kita banyak memohon    dia (merujuk ke Tuhan)    penegas’
-“kita banyak bermohon kepada-Nya”
-‘penegas yang mana itu’
-“yang mana”
-“Ati ati ati raja”
-‘adapun tuhan tidak harap dia penegas’
-“Yang tak diridhoi oleh Tuhan”
-
-‘walaupun penegas kita harap kan penegas’
-“walaupun kita sangat mengharapkan”
-“Ati raja”
-‘di naikkan di minta kita di kasihan’
-“Yang diharapkan dalam doa”
-‘Penegas ter-obat pula’
-“Namun terobati pula”
-“Ati ati ati raja”
-‘di terima permohonan nya penegas’
-“Doanya dikabulkan oleh Tuhan”
+<b>Manna mo ki minasa -i baule</b>
+<i>walaupun kita sangat mengharapkan”</i>
+<b>‘Ati raja’</b>
+<i>Ati raja</i>
+<b>Ni-panaiq ri-palaq-taq ri kodong</b>
+<i>Yang diharapkan dalam doa”</i>
+<b>Rajale Alla taq-balle tonji</b>
+<i>Namun terobati pula”</i>
+<b>‘Ati ati ati raja’</b>
+<i>Ati ati ati raja”</i>
+<b>Na tarima papalaq-na baule</b>
+<i>Doanya dikabulkan oleh Tuhan”</i>

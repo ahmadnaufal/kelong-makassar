@@ -1,15 +1,36 @@
-Battu lau minjo mae sailong
-Seppeq seppeq na tommo
-Tarra ri genggeng 
-elele tarra ri genggeng
-Na tatiling lemo cina 
-Si ojang ojanogoseng 
-Koseng koseng
+<b>Battu lauq-mi-njo mae sailong</b>
+<i>Telah tiba sailong</i>
+<b>Soppeq-soppeq-na tommo</b>
+<i>Tetangganya saja</i>
+<b>Tarra ri genggeng elele tarra ri genggeng</b>
+<i>Tarra ri genggeng elele tarra ri genggeng</i>
+<b>Na tattiling lemo cina </b>
+<i>Dan terbalik jeruk manis”</i>
+<b>Si ojang ojanogoseng ..Kose.. </b>
+<i>Si ojang ojanogoseng ..Kose.. </i>
 
-Lemo cina ji langumang sailong
-Na dalima raponna 
-Apa bunganna 
-Elele apa bunganna
-Bungan tonjong lango
-Si ojang ojangoseng
-Goseng goseng
+<b>Lemo cina-ji ku-lamung sailong</b>
+<i>Jeruk manis yang ditanam</i>
+<b>Na dalima rappo-na </b>
+<i>Berbuah delima</i>
+<b>Apa bunga-na </b>
+<i>Bunganya apanya</i>
+<b>Elele apa bunga -na</b>
+<i>Bunganya apanya</i>
+<b>Bunga-na tonjong lango</b>
+<i>Teratai ungu bunganya”</i>
+<b>Si ojang ojangoseng Kose</b> 
+<i>Si ojang ojangoseng Kose</i> 
+
+<b>Salapang bangngina bunga sailong</b>
+<i>...</i>
+<b>Na dalimana rappoang </b>
+<i>...</i>
+<b>Kimatimporong </b>
+<i>...</i>
+<b>Elele…. Kimatimporong</b>
+<i>...</i>
+<b>Ribija seppe-seppetta</b>
+<i>...</i>
+<b>Si ojang ojangoseng Kose</b>
+<i>Si ojang ojangoseng Kose</i>

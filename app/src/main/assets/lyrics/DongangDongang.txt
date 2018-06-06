@@ -1,13 +1,25 @@
-Takunjungan bangunturu galle
-Na ku ginciri naung guling ku
-Kualleanna minasa na toa li 
-a dongang dongang labella karaeng
+<b>Takunjunga  bangunturu galle</b>
+<i>Sekali layar terkembang</i>
+<b>Na ku ginciri naung guling ku</b>
+<i>Kemudi sudah kuarahkan</i>
+<b>Kualleanna minasa natoali</b>
+<i>Takkan kembali sebelum cita-cita tercapai </i>
+<b>a dongang dongang labella karaeng</b>
+<i>a dongang dongang labella karaeng</i>
+<b>Dongang la dongang dongang la </b>
+<i>Dongang la dongang dongang la</i>
+<b>niaq mateqne nateqne nalalo apami gau</b>
+<i>Ada kebahagian namun terlewatkan jua</i>
 
-Dongang la dongang dongang la 
-nia ma teqne na teqne nala lo apami gau
-Tutuki malepa –lepa galle 
-mabiseang ma I rate monjo 
-
-Toaki salla ki mina na toali 
-a dongan dongang 
-la bella karaeng
+<b>Tutuki malepa â€“lepa galle</b>
+<i>hati-hatilah berlayar</i>
+<b>mabiseang ma i rate moncong</b>
+<i>mendayung di atas bukit</i>
+<b>Tallangkiq sallang</b>
+<i>nanti anda tenggelam</i>
+<b>Ki nasakkoq alimbuqbuq</b>
+<i>tersedak debu</i>
+<b>a dongan dongang</b>
+<i>a dongan dongang</i>
+<b>la bella karaeng</b>
+<i>la bella karaeng</i>

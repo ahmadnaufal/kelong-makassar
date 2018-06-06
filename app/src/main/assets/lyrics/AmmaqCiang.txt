@@ -1,34 +1,19 @@
-Lirik Lagu
+<b>Ammaq ciang dendang ‘</b>
+<i>Ammaq ciang dendang”</i>
+<b>‘Ammaq ciang dendang ‘</b>
+<i>Ammaq ciang dendang”</i>
+<b>Ammaq ciang Tallu lawaraq lekoq-na</b>
+<i>tiga lembar daunnya”</i>
+<b>Alla napa- aqlang –i</b>
+<i>menaungi”</i>
+<b>Sikontu bone-na lino</b>
+<i>seisi dunia” </i>     
 
-‘Ammaq ciang dendang‘
-‘Ammaq ciang dendang‘
-Ammaq ciang Tallu lawaraq lekoq-na
-Alla napa- laqlang -i
-Sikontu bone-na lino
-
-Maq-biring kassi iya tu dende
-Ma- tamparang ma-tamparang laisiq-nu
-Alla Mak-tete bombang
-Bukkuleng tama-laqju-a
-
-
-Arti Lagu
-
-“Ammaq ciang dendang”
-“Ammaq ciang dendang”
-‘Ammaq ciang tiga lembar daun -nya’
-“tiga lembar daunnya” 
-‘penegas me-bernaung-penegas’
-“menaungi”
-‘semua isi-nya dunia’
-“seisi dunia”      
-
-‘ber- pinggir pasir penegas’
-“mendekatkan diri kepada sang pencipta”
-‘ber- laut ber- laut perumpamaan wajah/bayangan -mu’
-“bagaikan seluas lautan”
-‘Penegas me-titian ombak’
-“Meniti ombak”
-‘kulit tidak manja-pelengkap’
-“Tuhan yang tidak pernah lepas dari manusia”
-
+<b>Maq-biring kassi iya tu dende</b>
+<i>mendekatkan diri kepada sang pencipta”</i>
+<b>Ma-tamparang ma-tamparang laisiq –nu</b>
+<i>bagaikan seluas lautan”</i>
+<b>Alla Mak-tete bombang</b>
+<i>Meniti ombak”</i>
+<b>Bukkuleng tama-laqju-a</b>
+<i>Tuhan yang tidak pernah lepas dari manusia”</i>

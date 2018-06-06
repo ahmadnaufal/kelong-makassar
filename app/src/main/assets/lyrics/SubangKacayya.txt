@@ -1,13 +1,42 @@
-Subang kacayya
-Teqne lalo balasaqna ri katte nagseng
-Elele atu denda karaeng 
-Kamase kamaseku ri kodong 
+<b>Subang kaca-ya</b>
+<i>Gelang permata</i>
+<b>Teqne lalo balasaq-na ri katte-ngaseng</b>
+<i>Semoga kebahagiaan yang kita dapatkan</i>
+<b>Elele atu denda karaeng </b>
+<i>Elele atu denda karaeng </i>
+<b>Kamase kamase-ku ri kodong </b>
+<i>Kasihanilah saya</i>
 
-Larromi onde onde daelle 
-Ka na gulung mi kallena ri kodong
-Ni sambeanna kalukunna ri putua daelle
+<b>Larro-mi onde-onde daelle </b>
+<i>Dia sudah marah</i>
+<b>Ka na-gulung –mi kale -na ri kodong </b>
+<i>Karena sudah menarik diri</i>
+<b>Ni-sambe-anna kaluku-na ri putu-a daelle</b>
+<i>“Kelapanya diganti oleh putu”</i>
 
-Alla mamuji ngaseng berang ja nakke 
-Na ni pateqba kodong pangku 
-pangkuluqja Nisoeang karaeng
-a muji ngaseng si kuntu mangakalea ri kodong 
+<b>Alla mamuji ngaseng</b>
+<i>Semua memuji</i>
+<b>berang-ja nakke </b>
+<i>saya hanya parang</i>
+<b>Na ni-pateqba kodong</b> 
+<i>Cuma dipakai memotong</i>
+<b>pangku-pangkuluqja ni-soeang karaeng</b>
+<i>gagang paranglah yang menggerakkannya</i>
+<b>am-muji ngaseng sikontu mangakalea ri kodong </b>
+<i>semua memuji</i>
+
+<b>Subang kaca-ya</b>
+<i>Gelang permata</i>
+<b>Teqne lalo balasaq- na ri katte ngaseng </b>
+<i>Semoga kita mendapat balasan yang manis</i>
+<b>elele atu dendang karaeng </b>
+<i>elele atu dendang karaeng </i>
+<b>minasa allo banggi -ku ri kodong</b>
+<i>harapanku siang dan malam</i>
+
+<b>sallang -na bunga eja-ya daelle</b>
+<i>salam dari sang gadis</i>
+<b>bauq-na mamo rasa -na ri kodong</b>
+<i>harumnya semerbak</i>
+<b>sallo-mi nakku lekoq daun harania daelle</b>
+<i>sudah lama dirindukannya</i>

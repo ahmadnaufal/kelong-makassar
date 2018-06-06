@@ -1,36 +1,23 @@
-Lirik Lagu
+<b>Ikatteri tu- rate-a punna niaq paggaukang</b>
+<i>kita orang dari atas (Makassar), apabila kegiatan</i>
+<b>Suku bajiq -na bunga-na ilang kebo</b>
+<i>Kembang ilang kebo sangat bagus</i>
+<b>‘Alla dende Alla sayang’</b>
+<i>Alla dende Alla sayang</i>
+<b>Niaqanne seqre-seqre antu dende dende lo</b>
+<i>satu-satunya</i>
+<b>‘Ala ridendang kodong’</b>
+<i>Ala ridendang kodong”</i>
 
-Ikatteri tu- rate-a punna niaq paggaukang
-Suku bajiq -na bunga-na ilang kebo
-‘Alla dende Alla sayang’
-Niaqanne seqre-seqre antu dende dende lo
-‘Ala ridendang kodong’
-
-Butta rate butta bajiq
-Butta paq-lamuq-lamung-ang
-Manna kalongkong bunga-na ilang kebo
-‘Ala Ridendang kodong’
-ni-kana-ya seqre-seqre antu dende dende lo
-‘Ala Ridendang kodong’
-
-
-Arti Lagu
-
-‘kita orang atas yang apabila ada pesta’
-“kita orang dari atas (Makassar), apabila kegiatan”
-‘sangat bagus-nya kembang-nya ilang kebo’
-“Kembang ilang kebo sangat bagus”
-“Alla dende Alla sayang"
-‘ada ini satu-satu itu penegas’
-“satu-satunya”
-“Ala ridendang kodong”
-
-‘tanah atas tanah bagus’
-“tanahnya tanah yang subur”
-‘tanah pe-tanam-tanam-an
-“tanah untuk bercocok tanam”
-‘walau kelongkong bunga -nya  ilang kebo’
-“walau kelopak bunganya ilang kebo”
-‘penegas di-katakan-penegas satu-satu itu penegas’
-“satu-satunya”
-“Ala Ridendang kodong”
+<b>Butta rate butta bajiq</b>
+<i>tanahnya tanah yang subur</i>
+<b>Butta paq-lamuq-lamung-ang</b>
+<i>tanah untuk bercocok tanam</i>
+<b>Manna kalongkong bunga-na ilang kebo</b>
+<i>walau kelopak bunganya ilang kebo</i>
+<b>‘Ala Ridendang kodong’</b>
+<i>Ala Ridendang kodong</i>
+<b>ni-kana-ya seqre-seqre antu dende dende lo</b>
+<i>satu-satunya</i>
+<b>‘Ala Ridendang kodong’</b>
+<i>Ala Ridendang kodong</i>
