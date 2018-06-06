@@ -1,9 +1,11 @@
 package id.kelongmakassar.kelongmakassar.ui.track.detail;
 
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -99,7 +101,12 @@ public class TrackLyricsFragment extends Fragment {
                 }
             }
 
-            trackLyricsTextView.setText(text);
+            String lyricsStr = text.toString().replaceAll("\r?\n", "<br/>");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                trackLyricsTextView.setText(Html.fromHtml(lyricsStr, Html.FROM_HTML_MODE_LEGACY));
+            } else {
+                trackLyricsTextView.setText(Html.fromHtml(lyricsStr));
+            }
         }
     }
 }
