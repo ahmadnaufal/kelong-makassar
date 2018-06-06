@@ -81,13 +81,13 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
 
     @OnClick(R.id.button_atiraja_no_vocal)
     void onAtirajaNoVocalClick() {
-        Intent intent = TutorialExampleActivity.getStartIntent(this);
+        Intent intent = TutorialExampleActivity.getStartIntent(this, false);
         startActivity(intent);
     }
 
     @OnClick(R.id.button_atiraja_vocal)
     void onAtirajaVocalClick() {
-        Intent intent = TutorialExampleActivity.getStartIntent(this);
+        Intent intent = TutorialExampleActivity.getStartIntent(this, true);
         startActivity(intent);
     }
 
