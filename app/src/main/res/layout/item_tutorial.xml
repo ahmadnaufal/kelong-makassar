@@ -66,11 +66,12 @@
                 android:text="(Istilah dalam menyeret nada)" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/image_tutorial_notation"
+        <TextView
+            android:id="@+id/text_tutorial_explanation"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/rounded_background_default" />
+            android:background="@drawable/rounded_background_default" />
     </LinearLayout>
 </LinearLayout>

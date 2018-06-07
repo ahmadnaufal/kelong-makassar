@@ -59,7 +59,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
         @BindView(R.id.button_play) ImageView playImageView;
         @BindView(R.id.text_tutorial_desc) TextView tutorialDescTextView;
         @BindView(R.id.image_dropdown_toggle) ImageView dropdownImageView;
-        @BindView(R.id.image_tutorial_notation) ImageView tutorialNotationImageView;
+        @BindView(R.id.text_tutorial_explanation) TextView tutorialExplanationTextView;
 
         private boolean isNotationShown = false;
 
@@ -70,7 +70,8 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
 
         void bind(int position, final Tutorial tutorial, Context context, final OnTutorialInteractionListener listener) {
             // for initial state, hide the imageview
-            tutorialNotationImageView.setVisibility(View.GONE);
+            tutorialExplanationTextView.setText(tutorial.getExplanation());
+            tutorialExplanationTextView.setVisibility(View.GONE);
 
             numberTextView.setText(context.getString(R.string.text_numbering, position));
             tutorialNameTextView.setText(tutorial.getName());
@@ -87,7 +88,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
                 @Override
                 public void onClick(View view) {
                     isNotationShown = !isNotationShown;
-                    tutorialNotationImageView.setVisibility(isNotationShown ? View.VISIBLE : View.GONE);
+                    tutorialExplanationTextView.setVisibility(isNotationShown ? View.VISIBLE : View.GONE);
                     dropdownImageView.setImageResource(isNotationShown ? R.drawable.ic_pull_up_menu : R.drawable.ic_pull_down_menu);
                 }
             });

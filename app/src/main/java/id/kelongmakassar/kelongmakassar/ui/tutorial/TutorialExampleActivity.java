@@ -44,7 +44,6 @@ public class TutorialExampleActivity extends AppCompatActivity implements MediaP
         setContentView(R.layout.activity_tutorial_example);
         ButterKnife.bind(this);
 
-
         if (getIntent().getBooleanExtra(IS_VOCAL_ENABLED, true)) {
             exampleTitleTextView.setText(R.string.label_atiraja_vocal);
             exampleResId = R.raw.ati_raja;
@@ -200,6 +199,13 @@ public class TutorialExampleActivity extends AppCompatActivity implements MediaP
         if (mMediaPlayer.isPlaying()) {
             mMediaPlayer.pause();
             resumePosition = mMediaPlayer.getCurrentPosition();
+        }
+    }
+
+    private void resumeMedia() {
+        if (!mMediaPlayer.isPlaying()) {
+            mMediaPlayer.seekTo(resumePosition);
+            mMediaPlayer.start();
         }
     }
 }

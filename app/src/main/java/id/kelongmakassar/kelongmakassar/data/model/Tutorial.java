@@ -5,13 +5,13 @@ public class Tutorial {
     private String name;
     private String description;
     private int resId;
-    private String notationPath;
+    private String explanation;
 
-    public Tutorial(String name, String description, int resId, String notationPath) {
+    public Tutorial(String name, String description, int resId, String explanation) {
         this.name = name;
         this.resId = resId;
         this.description = description;
-        this.notationPath = notationPath;
+        this.explanation = explanation;
     }
 
     public String getDescription() {
@@ -26,7 +26,7 @@ public class Tutorial {
         return resId;
     }
 
-    public String getNotationPath() {
-        return notationPath;
+    public String getExplanation() {
+        return explanation;
     }
 }
