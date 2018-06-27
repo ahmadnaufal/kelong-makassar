@@ -2,6 +2,9 @@ package id.kelongmakassar.kelongmakassar.data.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.support.v4.app.Fragment;
+
+import id.kelongmakassar.kelongmakassar.ui.games.WordMeaningGameFragment;
 
 public class WordMeaningQuestion implements Question, Parcelable {
 
@@ -55,5 +58,15 @@ public class WordMeaningQuestion implements Question, Parcelable {
         question = in.readString();
         in.readStringArray(answerList);
         correctAnswerIdx = in.readInt();
+    }
+
+    @Override
+    public Fragment createQuestionFragment() {
+        return WordMeaningGameFragment.newInstance(this);
+    }
+
+    @Override
+    public boolean isAnswerCorrect(int chosenIndex) {
+        return correctAnswerIdx == chosenIndex;
     }
 }

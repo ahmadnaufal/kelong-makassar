@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.games.AudioGuessGameFragment">
+    tools:context=".ui.games.KaraokeGameFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,5 +28,9 @@
             android:text="@string/text_kelong_question"/>
     </LinearLayout>
 
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_answers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
