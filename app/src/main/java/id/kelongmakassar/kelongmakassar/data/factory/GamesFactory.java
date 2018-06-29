@@ -26,37 +26,13 @@ public class GamesFactory {
                     "Berisi doa dan harapan"
             }, 2),
 
-            new TextQuestion("Yang bukan nilai-nilai Kelong Makassar adalah...", new String[]{
-                    "Nilai benda", "Nilai moral", "Nilai religius", "Nasihat-nasihat tentang kehidupan"
-            }, 0),
-
-            new TextQuestion("\"Mengakui keberadaan Allah SWT, Nabi Muhammad SAW, dan Nabi Adam\"\nMakna lagu di atas terdapat pada kelong?", new String[]{
-                    "Ati Raja", "Maqrencong-rencong", "Ammaq Ciang", "Ilang Kebo"
-            }, 2),
-
-            new TextQuestion("\"Takkan kembali sebelum cita-cita tercapai\"\nArti lagu di atas terdapat pada kelong?", new String[]{
-                    "Ammaq ciang", "Ilang Kebo", "Dongang-dongang", "Sailong"
-            }, 2),
-
     };
 
     private WordMeaningQuestion[] wordMeaningQuestions = {
 
-            new WordMeaningQuestion("Kata dari \"Takkunjunga bangunturu\" artinya...", new String[]{
-                    "Hati-hatilah berlayar", "Sekali layar berkembang", "Mendayung dari atas bukit", "Perahu layar"
-            }, 1),
-
-            new WordMeaningQuestion("\"Tuhan\" dalam lagu Ati Raja bahasa Makassarnya adalah...", new String[]{
-                    "Batara", "Baule", "Lino", "Tangkellai"
-            }, 0),
-
             new WordMeaningQuestion("Cara penulisan kata yang benar adalah...", new String[]{
                     "Seqre-seqre-ji", "Ati-Raja", "Bunganna Ilangkebo", "Yamas Bangun"
             }, 0),
-
-            new WordMeaningQuestion("Ilang Kebo artinya...", new String[]{
-                    "Wanita", "Bunga Melati", "Perhiasan", "Sanggul"
-            }, 1),
 
             new WordMeaningQuestion("Cara penulisan yang benar adalah...", new String[]{
                     "Maqseqre-seqreki", "Maq-sombalak-i", "Teakiq", "Si-sa-lasi"
@@ -66,21 +42,9 @@ public class GamesFactory {
 
     private KaraokeQuestion[] karaokeQuestions = {
 
-            new KaraokeQuestion(R.raw.ammaq_ciang_karaoke, new String[]{
-                    "Dongang-dongang", "Ammaq Ciang", "Ilang Kebo", "Sailong"
-            }, 1),
-
             new KaraokeQuestion(R.raw.marencong_rencong_karaoke, new String[]{
                     "Ati Raja", "Subang Kacayya", "Maqrencong-rencong", "Mas Bangun"
             }, 2),
-
-            new KaraokeQuestion(R.raw.sailong_karaoke, new String[]{
-                    "Ati Raja", "Maqrencong-rencong", "Sailong", "Ilang Kebo"
-            }, 3),
-
-            new KaraokeQuestion(R.raw.dongang_dongang_karaoke, new String[]{
-                    "Ammaq Ciang", "Dongang-dongang", "Ilang Kebo", "Sailong"
-            }, 1),
 
             new KaraokeQuestion(R.raw.ati_raja_karaoke, new String[]{
                     "Ati Raja", "Subang Kacayya", "Maqrencong-rencong", "Mas Bangun"
@@ -152,7 +116,7 @@ public class GamesFactory {
             case 3:
                 return getRandomKaraokeQuestion();
             case 4:
-                return (Utility.generateRandomInteger(0, 4) > 2) ? getRandomSongPartQuestion() : getRandomSongContinueQuestion();
+                return getRandomSongContinueQuestion();
             default:
                 return null;
         }
