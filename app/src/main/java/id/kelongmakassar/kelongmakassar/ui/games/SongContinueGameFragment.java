@@ -84,7 +84,11 @@ public class SongContinueGameFragment extends QuestionFragment {
         mAnswersSongAdapter.setListener(new OnSongAnswerClickedListener() {
             @Override
             public boolean onPlayClickListener(int resId) {
-                return mAnswerClickedListener != null && mAnswerClickedListener.onPlayButtonPressed(resId);
+                if (mAnswerClickedListener != null) {
+                    changeButtonToPlay();
+                    return mAnswerClickedListener.onPlayButtonPressed(resId);
+                }
+                return false;
             }
 
             @Override
