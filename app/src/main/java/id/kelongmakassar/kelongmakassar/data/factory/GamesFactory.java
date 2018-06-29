@@ -7,6 +7,7 @@ import java.util.List;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.KaraokeQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.Question;
+import id.kelongmakassar.kelongmakassar.data.model.SongContinueQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.SongPartQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.TextQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.WordMeaningQuestion;
@@ -103,6 +104,18 @@ public class GamesFactory {
 
     };
 
+    private SongContinueQuestion[] songContinueQuestions = {
+
+            new SongContinueQuestion(R.raw.dongang_question, "Lanjutan potongan lagu di atas adalah...", new int[]{
+                    R.raw.the_a_answer, R.raw.ammaq_ciang_short, R.raw.dongang_short, R.raw.ilang_kebo_short
+            }, 2),
+
+            new SongContinueQuestion(R.raw.ilang_kebo_question, "Lanjutan potongan lagu di atas adalah...", new int[]{
+                    R.raw.the_a_answer, R.raw.ammaq_ciang_short, R.raw.dongang_short, R.raw.ilang_kebo_short
+            }, 3),
+
+    };
+
     public List<Question> generateRandomFourQuestions() {
         List<Question> questions = new ArrayList<>();
 
@@ -124,7 +137,7 @@ public class GamesFactory {
             case 3:
                 return getRandomKaraokeQuestion();
             case 4:
-                return getRandomSongPartQuestion();
+                return (Utility.generateRandomInteger(0, 4) > 2) ? getRandomSongPartQuestion() : getRandomSongContinueQuestion();
             default:
                 return null;
         }
@@ -144,5 +157,9 @@ public class GamesFactory {
 
     private SongPartQuestion getRandomSongPartQuestion() {
         return songPartQuestions[Utility.generateRandomInteger(0, songPartQuestions.length - 1)];
+    }
+
+    private SongContinueQuestion getRandomSongContinueQuestion() {
+        return songContinueQuestions[Utility.generateRandomInteger(0, songContinueQuestions.length - 1)];
     }
 }

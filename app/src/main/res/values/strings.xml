@@ -37,7 +37,7 @@
 
     <string name="text_numbering">%1$d.</string>
     <string name="text_tutorial_item_description">(%1$s)</string>
-    <string name="text_kelong_question">Judul kelong di atas adalah...</string>
+    <string name="text_kelong_question">Judul kelong di atas adalah…</string>
     <string name="label_score">Skor</string>
     <string name="label_play_again">Main Lagi</string>
 </resources>
