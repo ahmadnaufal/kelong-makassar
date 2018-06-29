@@ -1,21 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/track_background"
-    android:gravity="center"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
     tools:context=".ui.games.GamesScoreActivity">
 
     <ImageView
         android:id="@+id/image_emotion"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emoticon_cry" />
 
-    <TextView
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:minHeight="180dp"
+            android:background="@drawable/rounded_background_white">
+
+            <TextView
+                fontPath="fonts/ArcherBold.otf"
+                android:id="@+id/text_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_score"
+                android:background="@drawable/background_score_round"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:textColor="@android:color/black"
+                android:textSize="40sp" />
+        </RelativeLayout>
+
+        <TextView
+            fontPath="fonts/ArcherBold.otf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_score_title"
+            android:minWidth="142dp"
+            android:text="@string/label_score"
+            android:textAlignment="center"
+            android:textSize="32sp" />
+    </RelativeLayout>
+
+    <Button
+        style="@style/MyButton.Small"
+        android:id="@+id/button_play_again"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/label_score" />
+        android:layout_marginTop="8dp"
+        android:text="@string/label_play_again" />
+
+    <Button
+        style="@style/MyButton.Small"
+        android:id="@+id/button_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/label_menu" />
 </LinearLayout>

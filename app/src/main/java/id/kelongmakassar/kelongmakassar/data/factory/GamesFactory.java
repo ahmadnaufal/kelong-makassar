@@ -7,6 +7,7 @@ import java.util.List;
 import id.kelongmakassar.kelongmakassar.R;
 import id.kelongmakassar.kelongmakassar.data.model.KaraokeQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.Question;
+import id.kelongmakassar.kelongmakassar.data.model.SongPartQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.TextQuestion;
 import id.kelongmakassar.kelongmakassar.data.model.WordMeaningQuestion;
 import id.kelongmakassar.kelongmakassar.util.Utility;
@@ -17,24 +18,24 @@ public class GamesFactory {
 
             new TextQuestion("Yang bukan makna lagu \"Mas Bangun\" adalah...", new String[]{
                     "Menciptakan perdamaian", "Jangan mengadu domba", "Meyakini Tuhan hanya satu", "Jangan berbuat zina"
-            }, 1),
+            }, 2),
 
             new TextQuestion("Yang bukan fungsi Kelong Makassar adalah...", new String[]{
                     "Sebagai media komunikasi", "Sebagai media hiburan", "Sebagai panduan untuk bercocok tanam",
                     "Berisi doa dan harapan"
-            }, 3),
+            }, 2),
 
             new TextQuestion("Yang bukan nilai-nilai Kelong Makassar adalah...", new String[]{
-                    "Nilai sosial", "Nilai moral", "Nilai religius", "Nasihat-nasihat tentang kehidupan"
-            }, 3),
+                    "Nilai benda", "Nilai moral", "Nilai religius", "Nasihat-nasihat tentang kehidupan"
+            }, 0),
 
             new TextQuestion("\"Mengakui keberadaan Allah SWT, Nabi Muhammad SAW, dan Nabi Adam\"\nMakna lagu di atas terdapat pada kelong?", new String[]{
                     "Ati Raja", "Maqrencong-rencong", "Ammaq Ciang", "Ilang Kebo"
-            }, 3),
+            }, 2),
 
             new TextQuestion("\"Takkan kembali sebelum cita-cita tercapai\"\nArti lagu di atas terdapat pada kelong?", new String[]{
                     "Ammaq ciang", "Ilang Kebo", "Dongang-dongang", "Sailong"
-            }, 3),
+            }, 2),
 
     };
 
@@ -46,19 +47,19 @@ public class GamesFactory {
 
             new WordMeaningQuestion("\"Tuhan\" dalam lagu Ati Raja bahasa Makassarnya adalah...", new String[]{
                     "Batara", "Baule", "Lino", "Tangkellai"
-            }, 1),
+            }, 0),
 
             new WordMeaningQuestion("Cara penulisan kata yang benar adalah...", new String[]{
                     "Seqre-seqre-ji", "Ati-Raja", "Bunganna Ilangkebo", "Yamas Bangun"
-            }, 3),
+            }, 0),
 
             new WordMeaningQuestion("Ilang Kebo artinya...", new String[]{
                     "Wanita", "Bunga Melati", "Perhiasan", "Sanggul"
-            }, 2),
+            }, 1),
 
-            new WordMeaningQuestion("Judul kelong di atas adalah...", new String[]{
+            new WordMeaningQuestion("Cara penulisan yang benar adalah...", new String[]{
                     "Maqseqre-seqreki", "Maq-sombalak-i", "Teakiq", "Si-sa-lasi"
-            }, 3),
+            }, 1),
 
     };
 
@@ -74,7 +75,7 @@ public class GamesFactory {
 
             new KaraokeQuestion(R.raw.sailong_karaoke, new String[]{
                     "Ati Raja", "Maqrencong-rencong", "Sailong", "Ilang Kebo"
-            }, 2),
+            }, 3),
 
             new KaraokeQuestion(R.raw.dongang_dongang_karaoke, new String[]{
                     "Ammaq Ciang", "Dongang-dongang", "Ilang Kebo", "Sailong"
@@ -86,12 +87,29 @@ public class GamesFactory {
 
     };
 
+    private SongPartQuestion[] songPartQuestions = {
+
+            new SongPartQuestion(R.raw.mas_bangun_section, "Judul potongan lagu di atas adalah...", new String[]{
+                    "Ati Raja", "Mas Bangun", "Sailong", "Subang Kacayya"
+            }, 1),
+
+            new SongPartQuestion(R.raw.subang_kacayya_section, "Judul potongan lagu di atas adalah...", new String[]{
+                    "Ati Raja", "Mas Bangun", "Sailong", "Subang Kacayya"
+            }, 3),
+
+            new SongPartQuestion(R.raw.ati_raja_section, "Istilah Belo-Belo na pada potongan kelong di atas terdapat pada kata...", new String[]{
+                    "Seqre-seqre", "Baule", "Batara", "Ati Raja"
+            }, 1),
+
+    };
+
     public List<Question> generateRandomFourQuestions() {
         List<Question> questions = new ArrayList<>();
 
         questions.add(getQuestion(1));
         questions.add(getQuestion(2));
         questions.add(getQuestion(3));
+        questions.add(getQuestion(4));
         Collections.shuffle(questions);
 
         return questions;
@@ -105,6 +123,8 @@ public class GamesFactory {
                 return getRandomWordMeaningQuestion();
             case 3:
                 return getRandomKaraokeQuestion();
+            case 4:
+                return getRandomSongPartQuestion();
             default:
                 return null;
         }
@@ -120,5 +140,9 @@ public class GamesFactory {
 
     private KaraokeQuestion getRandomKaraokeQuestion() {
         return karaokeQuestions[Utility.generateRandomInteger(0, karaokeQuestions.length - 1)];
+    }
+
+    private SongPartQuestion getRandomSongPartQuestion() {
+        return songPartQuestions[Utility.generateRandomInteger(0, songPartQuestions.length - 1)];
     }
 }

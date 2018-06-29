@@ -42,5 +42,6 @@ public class QuestionFragment extends Fragment {
      */
     public interface OnAnswerListener {
         void onAnswer(int index);
+        boolean onPlayButtonPressed(int resId);
     }
 }

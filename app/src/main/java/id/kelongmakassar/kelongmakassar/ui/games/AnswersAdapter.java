@@ -2,6 +2,7 @@ package id.kelongmakassar.kelongmakassar.ui.games;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,7 +36,7 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.AnswerHo
 
     @Override
     public void onBindViewHolder(@NonNull AnswerHolder holder, int position) {
-        holder.bind(mAnswers[position], position, mListener);
+        holder.bind(mAnswers[position], position, mListener, mContext);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.AnswerHo
             ButterKnife.bind(this, itemView);
         }
 
-        void bind(String answerText, final int answerIndex, final OnAnswerClickedListener listener) {
+        void bind(String answerText, final int answerIndex, final OnAnswerClickedListener listener, Context context) {
             answerTextView.setText(answerText);
             answerTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -60,6 +61,22 @@ public class AnswersAdapter extends RecyclerView.Adapter<AnswersAdapter.AnswerHo
                     listener.onAnswerChosen(answerIndex);
                 }
             });
+
+            int colorResId;
+            switch (answerIndex) {
+                case 0:
+                    colorResId = R.color.colorAnswer1; break;
+                case 1:
+                    colorResId = R.color.colorAnswer2; break;
+                case 2:
+                    colorResId = R.color.colorAnswer3; break;
+                case 3:
+                    colorResId = R.color.colorAnswer4; break;
+                default:
+                    colorResId = R.color.colorAccent;
+            }
+
+            answerTextView.setBackgroundColor(ContextCompat.getColor(context, colorResId));
         }
     }
 }

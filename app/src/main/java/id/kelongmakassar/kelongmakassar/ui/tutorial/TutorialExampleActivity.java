@@ -31,6 +31,7 @@ public class TutorialExampleActivity extends AppCompatActivity implements MediaP
     private MediaPlayer mMediaPlayer;
     private int resumePosition;
     private int exampleResId;
+    private boolean isPaused;
 
     public static Intent getStartIntent(Context context, boolean isVocalEnabled) {
         Intent intent = new Intent(context, TutorialExampleActivity.class);
@@ -98,7 +99,18 @@ public class TutorialExampleActivity extends AppCompatActivity implements MediaP
 
     @OnClick(R.id.image_play_media)
     void onPlayMediaClick() {
-        playMedia();
+        if (isPaused) {
+            if (resumePosition > 0) {
+                resumeMedia();
+            } else {
+                playMedia();
+            }
+        } else {
+            pauseMedia();
+        }
+
+        isPaused = !isPaused;
+        playMediaImageView.setImageResource(isPaused ? R.drawable.ic_play_small : R.drawable.ic_pause_small);
     }
 
     @Override

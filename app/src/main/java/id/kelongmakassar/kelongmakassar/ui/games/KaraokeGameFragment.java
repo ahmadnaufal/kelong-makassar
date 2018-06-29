@@ -1,6 +1,5 @@
 package id.kelongmakassar.kelongmakassar.ui.games;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -20,9 +19,6 @@ import id.kelongmakassar.kelongmakassar.data.model.KaraokeQuestion;
 
 /**
  * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link OnKaraokeGameListener} interface
- * to handle interaction events.
  * Use the {@link KaraokeGameFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
@@ -34,8 +30,6 @@ public class KaraokeGameFragment extends QuestionFragment {
     @BindView(R.id.recyclerview_answers) RecyclerView answersRecyclerView;
 
     private KaraokeQuestion mQuestion;
-
-    private OnKaraokeGameListener mListener;
 
     private AnswersAdapter mAnswersAdapter;
 
@@ -96,52 +90,21 @@ public class KaraokeGameFragment extends QuestionFragment {
 
     @OnClick(R.id.image_play_media)
     void onButtonPressed() {
-        if (mListener != null) {
-            boolean isPlayed = mListener.onPlayButtonPressed(mQuestion.getResId());
+        if (mAnswerClickedListener != null) {
+            boolean isPlayed = mAnswerClickedListener.onPlayButtonPressed(mQuestion.getResId());
             if (isPlayed) {
-                changeToPlayState();
+                changeButtonToPause();
             } else {
-                changeToPauseState();
+                changeButtonToPlay();
             }
         }
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnKaraokeGameListener) {
-            mListener = (OnKaraokeGameListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnKaraokeGameListener");
-        }
+    private void changeButtonToPause() {
+        playMediaImageView.setImageResource(R.drawable.ic_pause);
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    private void changeToPlayState() {
-
-    }
-
-    private void changeToPauseState() {
-
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnKaraokeGameListener {
-        boolean onPlayButtonPressed(int resId);
+    private void changeButtonToPlay() {
+        playMediaImageView.setImageResource(R.drawable.ic_play);
     }
 }

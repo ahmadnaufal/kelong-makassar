@@ -41,6 +41,8 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaPlaye
     private MediaPlayer mMediaPlayer;
     private int resumePosition;
 
+    private boolean isPaused;
+
     private Handler mHandler = new Handler();
     private Runnable updateSeekbarTask = new Runnable() {
         @Override
@@ -99,7 +101,7 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaPlaye
             statusSongSeekBar.setProgress(currentPosition);
         }
 
-        mHandler.postDelayed(updateSeekbarTask, 1000);
+        mHandler.postDelayed(updateSeekbarTask, 100);
     }
 
     private void initFirstLayout() {
@@ -143,7 +145,18 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaPlaye
 
     @OnClick(R.id.button_control)
     void onMediaControlClick() {
-        playMedia();
+        if (isPaused) {
+            if (resumePosition > 0) {
+                resumeMedia();
+            } else {
+                playMedia();
+            }
+        } else {
+            pauseMedia();
+        }
+
+        isPaused = !isPaused;
+        controlImageView.setImageResource(isPaused ? R.drawable.ic_play : R.drawable.ic_pause);
     }
 
     @OnClick(R.id.image_back)
@@ -313,6 +326,8 @@ public class TrackDetailActivity extends AppCompatActivity implements MediaPlaye
 
     private void prepareController() {
         int durationInMillis = mMediaPlayer.getDuration();
+
+        isPaused = true;
 
         elapsedTimeTextView.setText(DateUtils.formatElapsedTime(0));
         remainingTimeTextView.setText("- " + DateUtils.formatElapsedTime(durationInMillis / 1000));

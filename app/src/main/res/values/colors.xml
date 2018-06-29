@@ -5,4 +5,9 @@
     <color name="colorAccent">#5F5D5E</color>
 
     <color name="colorButtonText">#717171</color>
+
+    <color name="colorAnswer1">#4872B0</color>
+    <color name="colorAnswer2">#87393A</color>
+    <color name="colorAnswer3">#745285</color>
+    <color name="colorAnswer4">#0E5A71</color>
 </resources>

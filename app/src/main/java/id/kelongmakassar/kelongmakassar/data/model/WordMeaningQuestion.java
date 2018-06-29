@@ -69,4 +69,9 @@ public class WordMeaningQuestion implements Question, Parcelable {
     public boolean isAnswerCorrect(int chosenIndex) {
         return correctAnswerIdx == chosenIndex;
     }
+
+    @Override
+    public int getAnswerCorrectScore() {
+        return 25;
+    }
 }
