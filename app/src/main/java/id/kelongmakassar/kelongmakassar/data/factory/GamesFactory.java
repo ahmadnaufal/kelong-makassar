@@ -88,6 +88,21 @@ public class GamesFactory {
 
     };
 
+    /**
+     * as a replacement for the text questions.
+     */
+    private SongPartQuestion[] newSongPartQuestions = {
+
+            new SongPartQuestion(R.raw.tut_1, "Ciri khas dalam bernyanyi Kelong Makassar pada potongan lagu di atas menggunakan istilah...", new String[]{
+                    "Besoq-besoqna", "Mebbereq Saqra", "Lekko-lekkona", "Belo-belona"
+            }, 0),
+
+            new SongPartQuestion(R.raw.tut_4, "Ciri khas dalam bernyanyi Kelong Makassar pada potongan lagu di atas menggunakan istilah...", new String[]{
+                    "Besoq-besoqna", "Mebbereq Saqra", "Lekko-lekkona", "Belo-belona"
+            }, 3),
+
+    };
+
     private SongPartQuestion[] songPartQuestions = {
 
             new SongPartQuestion(R.raw.mas_bangun_section, "Judul potongan lagu di atas adalah...", new String[]{
@@ -131,7 +146,7 @@ public class GamesFactory {
     private Question getQuestion(int type) {
         switch (type) {
             case 1:
-                return getRandomTextQuestion();
+                return getRandomNewSongPartQuestion();
             case 2:
                 return getRandomWordMeaningQuestion();
             case 3:
@@ -157,6 +172,10 @@ public class GamesFactory {
 
     private SongPartQuestion getRandomSongPartQuestion() {
         return songPartQuestions[Utility.generateRandomInteger(0, songPartQuestions.length - 1)];
+    }
+
+    private SongPartQuestion getRandomNewSongPartQuestion() {
+        return newSongPartQuestions[Utility.generateRandomInteger(0, newSongPartQuestions.length - 1)];
     }
 
     private SongContinueQuestion getRandomSongContinueQuestion() {
