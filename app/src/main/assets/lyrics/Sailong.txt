@@ -3,11 +3,11 @@
 <b>Soppeq-soppeq-na tommo</b>
 <i>Tetangganya saja</i>
 <b>Tarra ri genggeng elele tarra ri genggeng</b>
-<i>Tarra ri genggeng elele tarra ri genggeng</i>
+<i>Tarra ri genggeng elele tarra ri genggeng (memperindah lirik)</i>
 <b>Na tattiling lemo cina </b>
 <i>Dan terbalik jeruk manis”</i>
 <b>Si ojang ojanogoseng ..Kose.. </b>
-<i>Si ojang ojanogoseng ..Kose.. </i>
+<i>Si ojang ojanogoseng ..Kose.. (memperindah lirik)</i>
 
 <b>Lemo cina-ji ku-lamung sailong</b>
 <i>Jeruk manis yang ditanam</i>
@@ -20,17 +20,17 @@
 <b>Bunga-na tonjong lango</b>
 <i>Teratai ungu bunganya”</i>
 <b>Si ojang ojangoseng Kose</b> 
-<i>Si ojang ojangoseng Kose</i> 
+<i>Si ojang ojangoseng Kose (memperindah lirik)</i>
 
 <b>Salapang bangngina bunga sailong</b>
-<i>...</i>
+<i>Sembilan malam berbunga</i>
 <b>Na dalimana rappoang </b>
-<i>...</i>
+<i>Berbuah delima</i>
 <b>Kimatimporong </b>
-<i>...</i>
+<i>Kita menjenguk</i>
 <b>Elele…. Kimatimporong</b>
-<i>...</i>
+<i>Kita menjenguk</i>
 <b>Ribija seppe-seppetta</b>
-<i>...</i>
+<i>Keluarga dekat</i>
 <b>Si ojang ojangoseng Kose</b>
-<i>Si ojang ojangoseng Kose</i>
+<i>Si ojang ojangoseng Kose (memperindah lirik)</i>
