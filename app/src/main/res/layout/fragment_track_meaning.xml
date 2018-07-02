@@ -29,6 +29,6 @@
             android:layout_height="wrap_content"
             android:lineSpacingExtra="4dp"
             android:textIsSelectable="true"
-            android:text="@string/hello_blank_fragment" />
+            android:text="" />
     </ScrollView>
 </LinearLayout>

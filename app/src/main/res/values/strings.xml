@@ -24,16 +24,13 @@
     <string name="play">Play</string>
     <string name="stop">Stop</string>
     <string name="desc_app">A short description about this application.</string>
-    <string name="text_long_desc_kelong">Kelong Makassar adalah kumpulan syair-syair dalam puisi yang telah mengakar pada masyarakat Makassar dan dikembangkan menjadi gubahan lagu-lagu daerah dengan deratan nada-nada dan irama tertentu. Kelong Makassar atau Kelong Tau riolo (lagu orang dulu) adalah nyanyian yang dulunya diciptakan oleh penyair keturunan Tionghoa bernama Ho Eng Dji (HED).\nKelong Makassar termasuk pewarisan budaya lokal yang patut dilestarikan serta dijaga keberadaanya. Niai-nilai kelong Makassar banyak terkandung nasehat-nasehat kehidupan dunia akhirat termasuk cinta dan kasih sayang. Adapun fungsi kelong Makassar antara lain seabagi media komunikasi, penyampaian tata cara bergaul, nyanyiannya berisi doa dan harapan kepada Tuhan Yang Maha Esa dan sebagai juga sebagai hiburan.</string>
+    <string name="text_long_desc_kelong">Kelong Makassar adalah kumpulan syair-syair dalam puisi yang telah mengakar pada masyarakat Makassar dan dikembangkan menjadi gubahan lagu-lagu daerah dengan deratan nada-nada dan irama tertentu. Kelong Makassar atau Kelong Tau riolo (lagu orang dulu) adalah nyanyian yang dulunya diciptakan oleh penyair keturunan Tionghoa bernama Ho Eng Dji (HED).\n\nKelong Makassar termasuk pewarisan budaya lokal yang patut dilestarikan serta dijaga keberadaannya. Niai-nilai kelong Makassar banyak terkandung nasehat-nasehat kehidupan dunia akhirat termasuk cinta dan kasih sayang. Adapun fungsi kelong Makassar antara lain yaitu; Kelong sebagai media pendidikan, media hiburan, pembangkit semangat juang, media komunikasi dan Kelong sebagai produk dalam pelestarian budaya.</string>
 
     <string name="text_info_kelong_desc">Yuk, dengar lagu Kelong Ati Raja versi Bapak Bundu\' (69 tahun)</string>
 
     <string name="text_info_kelong_name"><b>Nama :</b> Muh. Syarif Dg. Bundu (Pensiunan Pegawai Kebudayaan Peninggalan Sejarah dan Purbakala Provinsi SulSelTeng)</string>
     <string name="text_info_kelong_profesi"><b>Profesi :</b> Pemain Musik Tradisi Orkes Tauriolo (Biola dan Vokal) Bungabiraeng dan menggeluti dunia musik Kelong Makassar dari tahun 1955-Sekarang</string>
     <string name="text_info_kelong_date"><b>Tempat, Tanggal Lahir :</b> Gowa, 5 Juli 1949</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="text_numbering">%1$d.</string>
     <string name="text_tutorial_item_description">(%1$s)</string>

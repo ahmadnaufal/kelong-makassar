@@ -90,6 +90,8 @@ public class GamesActivity extends AppCompatActivity implements QuestionFragment
     public void onBackPressed() {
         if (currentIndex > -1) {
             currentIndex--;
+            currentSongResId = -1;
+            stopMedia();
             setQuestionIndicator();
         }
 
@@ -125,6 +127,7 @@ public class GamesActivity extends AppCompatActivity implements QuestionFragment
     private void progressToNextQuestion() {
         currentIndex++;
         stopMedia();
+        currentSongResId = -1;
 
         if (currentIndex < mQuestionList.size()) {
             Fragment fragment = mQuestionList.get(currentIndex).createQuestionFragment();
