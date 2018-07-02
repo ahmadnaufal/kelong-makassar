@@ -16,6 +16,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    flavorDimensions "stage"
+
+    productFlavors {
+        production {
+            applicationId 'id.kelongmakassar.kelongmakassar'
+            dimension "stage"
+        }
+
+        sidang {
+            applicationId "id.kelongmakassar.kelongmakassar.sidang"
+            dimension "stage"
+        }
+    }
 }
 
 dependencies {
