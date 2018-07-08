@@ -25,6 +25,11 @@ public class LandingActivity extends AppCompatActivity {
     @BindView(R.id.layout_container) LinearLayout mContainerLayout;
     @BindView(R.id.image_pull_down) ImageView mPullDownImageView;
 
+    public static Intent getStartIntent(Context context) {
+        Intent intent = new Intent(context, LandingActivity.class);
+        return intent;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
