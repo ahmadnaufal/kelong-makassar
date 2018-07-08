@@ -17,7 +17,6 @@
             android:name=".ui.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -62,6 +61,10 @@
             android:name=".ui.games.GamesScoreActivity"
             android:label="@string/label_games"
             android:parentActivityName=".ui.games.GamesActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.OnboardingActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".services.MediaPlayerService" />

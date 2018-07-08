@@ -21,9 +21,15 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = LandingActivity.getStartIntent(SplashActivity.this);
-                startActivity(intent);
+                startOnboarding();
             }
         }, SPLASH_DISPLAY_LENGTH);
+    }
+
+    private void startOnboarding() {
+        Intent intent = OnboardingActivity.getStartIntent(this);
+        startActivity(intent);
+
+        finish();
     }
 }
