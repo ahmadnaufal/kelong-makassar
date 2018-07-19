@@ -37,4 +37,14 @@
     <string name="text_kelong_question">Judul kelong di atas adalah…</string>
     <string name="label_score">Skor</string>
     <string name="label_play_again">Main Lagi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="text_array_kelong_makassar_desc">
+        <item> </item>
+        <item>Pada umumnya masyarakat Makassar mengartikan Kelong adalah lagu atau nyanyian dan termasuk warisan budaya lokal yang patut dilestarikan dan dijaga keberadaannya</item>
+        <item>Nilai-nilai kelong Makassar banyak mengandung nasehat, tentang kehidupan dunia akhirat. Fungsi kelong Makassar antara lain yaitu; Kelong sebagai media pendidikan, media hiburan, pembangkit semangat juang, media komunikasi dan Kelong sebagai produk dalam pelestarian budaya.</item>
+        <item>Ho Eng Dji adalah salah satu tokoh penting penulis syair kelong Makassar</item>
+    </string-array>
 </resources>
