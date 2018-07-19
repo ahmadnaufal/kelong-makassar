@@ -10,4 +10,6 @@
     <color name="colorAnswer2">#87393A</color>
     <color name="colorAnswer3">#745285</color>
     <color name="colorAnswer4">#0E5A71</color>
+
+    <color name="colorOnboardingBackground">#7994C4</color>
 </resources>
