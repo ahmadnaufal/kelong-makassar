@@ -84,6 +84,7 @@ public class SongContinueGameFragment extends QuestionFragment {
         mAnswersSongAdapter.setListener(new OnSongAnswerClickedListener() {
             @Override
             public boolean onPlayClickListener(int resId) {
+                mAnswersSongAdapter.setPlayed(resId);
                 if (mAnswerClickedListener != null) {
                     changeButtonToPlay();
                     return mAnswerClickedListener.onPlayButtonPressed(resId);
@@ -102,6 +103,7 @@ public class SongContinueGameFragment extends QuestionFragment {
 
     @OnClick(R.id.image_play_media)
     void onButtonPressed() {
+        mAnswersSongAdapter.setPlayed(-1);
         if (mAnswerClickedListener != null) {
             boolean isPlayed = mAnswerClickedListener.onPlayButtonPressed(mQuestion.getResId());
             if (isPlayed) {

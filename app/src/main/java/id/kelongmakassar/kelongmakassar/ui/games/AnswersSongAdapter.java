@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import id.kelongmakassar.kelongmakassar.R;
@@ -18,15 +21,32 @@ public class AnswersSongAdapter extends RecyclerView.Adapter<AnswersSongAdapter.
 
     private Context mContext;
     private int[] mAnswers;
+    private List<Boolean> mIsPlayedList;
     private OnSongAnswerClickedListener mListener;
 
     AnswersSongAdapter(Context context, int[] answers) {
         mContext = context;
         mAnswers = answers;
+        mIsPlayedList = new ArrayList<>();
+        for (int i = 0; i < mAnswers.length; i++) {
+            mIsPlayedList.add(false);
+        }
     }
 
     public void setListener(OnSongAnswerClickedListener listener) {
         mListener = listener;
+    }
+
+    public void setPlayed(int resId) {
+        for (int i = 0; i < mAnswers.length; i++) {
+            if (mAnswers[i] == resId) {
+                mIsPlayedList.set(i, !mIsPlayedList.get(i));
+            } else {
+                mIsPlayedList.set(i, false);
+            }
+        }
+
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -37,7 +57,7 @@ public class AnswersSongAdapter extends RecyclerView.Adapter<AnswersSongAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull AnswerSongHolder holder, int position) {
-        holder.bind(mAnswers[position], position, mListener, mContext);
+        holder.bind(mAnswers[position], position, mListener, mContext, mIsPlayedList.get(position));
     }
 
     @Override
@@ -55,7 +75,7 @@ public class AnswersSongAdapter extends RecyclerView.Adapter<AnswersSongAdapter.
             ButterKnife.bind(this, itemView);
         }
 
-        void bind(final int answerResId, final int answerIndex, final OnSongAnswerClickedListener listener, Context context) {
+        void bind(final int answerResId, final int answerIndex, final OnSongAnswerClickedListener listener, Context context, boolean isPlayed) {
             char letter = (char) ((int) 'A' + answerIndex);
             answerTextView.setText(String.valueOf(letter));
             answerTextView.setOnClickListener(new View.OnClickListener() {
@@ -65,14 +85,12 @@ public class AnswersSongAdapter extends RecyclerView.Adapter<AnswersSongAdapter.
                 }
             });
 
+            playMediaImageView.setImageResource(isPlayed ? R.drawable.ic_pause_small : R.drawable.ic_play_small);
+
             playMediaImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (listener.onPlayClickListener(answerResId)) {
-                        playMediaImageView.setImageResource(R.drawable.ic_pause_small);
-                    } else {
-                        playMediaImageView.setImageResource(R.drawable.ic_play_small);
-                    }
+                    listener.onPlayClickListener(answerResId);
                 }
             });
 

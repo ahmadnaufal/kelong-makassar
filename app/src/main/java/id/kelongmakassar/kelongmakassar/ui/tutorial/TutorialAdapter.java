@@ -20,19 +20,36 @@ import id.kelongmakassar.kelongmakassar.data.model.Tutorial;
 public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder> {
     private Context mContext;
     private List<Tutorial> mTutorialList;
+    private List<Boolean> mIsPlayedList;
     private OnTutorialInteractionListener mListener;
 
     TutorialAdapter(Context mContext) {
         this.mContext = mContext;
         this.mTutorialList = new ArrayList<>();
+        this.mIsPlayedList = new ArrayList<>();
     }
 
     public void setTutorialList(List<Tutorial> tutorialList) {
         mTutorialList = tutorialList;
+        for (int i = 0; i < tutorialList.size(); i++) {
+            mIsPlayedList.add(false);
+        }
     }
 
     public void setListener(OnTutorialInteractionListener listener) {
         mListener = listener;
+    }
+
+    public void setPlayed(Tutorial tutorial) {
+        for (int i = 0; i < mTutorialList.size(); i++) {
+            if (tutorial.getResId() == mTutorialList.get(i).getResId()) {
+                mIsPlayedList.set(i, !mIsPlayedList.get(i));
+            } else {
+                mIsPlayedList.set(i, false);
+            }
+        }
+
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -44,7 +61,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
     @Override
     public void onBindViewHolder(@NonNull Holder holder, int position) {
         Tutorial tutorial = mTutorialList.get(position);
-        holder.bind(position + 1, tutorial, mContext, mListener);
+        holder.bind(position + 1, tutorial, mContext, mListener, mIsPlayedList.get(position));
     }
 
     @Override
@@ -68,7 +85,7 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
             ButterKnife.bind(this, itemView);
         }
 
-        void bind(int position, final Tutorial tutorial, Context context, final OnTutorialInteractionListener listener) {
+        void bind(int position, final Tutorial tutorial, Context context, final OnTutorialInteractionListener listener, final boolean isPlayed) {
             // for initial state, hide the imageview
             tutorialExplanationTextView.setText(tutorial.getExplanation());
             tutorialExplanationTextView.setVisibility(View.GONE);
@@ -76,6 +93,8 @@ public class TutorialAdapter extends RecyclerView.Adapter<TutorialAdapter.Holder
             numberTextView.setText(context.getString(R.string.text_numbering, position));
             tutorialNameTextView.setText(tutorial.getName());
             tutorialDescTextView.setText(context.getString(R.string.text_tutorial_item_description, tutorial.getDescription()));
+
+            playImageView.setImageResource(isPlayed ? R.drawable.ic_pause_small : R.drawable.ic_play_small);
 
             playImageView.setOnClickListener(new View.OnClickListener() {
                 @Override

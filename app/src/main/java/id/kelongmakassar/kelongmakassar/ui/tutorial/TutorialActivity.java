@@ -32,6 +32,10 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
 
     private boolean isExampleShown = false;
 
+    private int resumePosition;
+    private int currentSongResId;
+    private boolean isPaused;
+
     private TutorialAdapter mTutorialAdapter;
     private TutorialPresenter mPresenter;
     private MediaPlayer mMediaPlayer;
@@ -98,25 +102,50 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
         tutorialListRecyclerView.setNestedScrollingEnabled(false);
         mTutorialAdapter.setListener(new OnTutorialInteractionListener() {
             @Override
-            public void onPlayButtonClicked(Tutorial tutorial) {
-                if (mMediaPlayer != null) {
-                    stopMedia();
-
-                    mMediaPlayer.reset();
-                    try {
-                        // set the datasource to the mMediaPath attribute
-                        mMediaPlayer.setDataSource(TutorialActivity.this, Utility.resolveLocalMediaResourceUri(tutorial.getResId(), TutorialActivity.this));
-                    } catch (IOException e) {
-                        e.printStackTrace();
+            public boolean onPlayButtonClicked(Tutorial tutorial) {
+                mTutorialAdapter.setPlayed(tutorial);
+                if (tutorial.getResId() == currentSongResId) {
+                    if (isPaused) {
+                        if (resumePosition > 0) {
+                            resumeMedia();
+                        } else {
+                            playMedia();
+                        }
+                    } else {
+                        pauseMedia();
                     }
 
-                    mMediaPlayer.prepareAsync();
+                    isPaused = !isPaused;
+                    return !isPaused;
+                } else {
+                    setUpMedia(tutorial.getResId());
+                    return true;
                 }
             }
         });
 
         // hide button layout
         tutorialExampleLayout.setVisibility(View.GONE);
+    }
+
+    private void setUpMedia(int resId) {
+        if (mMediaPlayer != null) {
+            stopMedia();
+
+            mMediaPlayer.reset();
+            try {
+                // set the datasource to the mMediaPath attribute
+                mMediaPlayer.setDataSource(TutorialActivity.this, Utility.resolveLocalMediaResourceUri(resId, TutorialActivity.this));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            // reset properties
+            currentSongResId = resId;
+            resumePosition = 0;
+
+            mMediaPlayer.prepareAsync();
+        }
     }
 
     private void playMedia() {
@@ -129,6 +158,20 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
         if (mMediaPlayer == null) return;
         if (mMediaPlayer.isPlaying()) {
             mMediaPlayer.stop();
+        }
+    }
+
+    private void pauseMedia() {
+        if (mMediaPlayer.isPlaying()) {
+            mMediaPlayer.pause();
+            resumePosition = mMediaPlayer.getCurrentPosition();
+        }
+    }
+
+    private void resumeMedia() {
+        if (!mMediaPlayer.isPlaying()) {
+            mMediaPlayer.seekTo(resumePosition);
+            mMediaPlayer.start();
         }
     }
 
@@ -238,6 +281,7 @@ public class TutorialActivity extends AppCompatActivity implements TutorialMvpVi
 
     @Override
     public void onPrepared(MediaPlayer mediaPlayer) {
+        isPaused = false;
         playMedia();
     }
 
