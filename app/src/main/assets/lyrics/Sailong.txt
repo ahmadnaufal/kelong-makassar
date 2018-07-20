@@ -1,36 +1,36 @@
 <b>Battu lauq-mi-njo mae sailong</b>
 <i>Telah tiba sailong</i>
 <b>Soppeq-soppeq-na tommo</b>
-<i>Tetangganya saja</i>
+<i>dia yang biasa-biasa saja</i>
 <b>Tarra ri genggeng elele tarra ri genggeng</b>
-<i>Tarra ri genggeng elele tarra ri genggeng (memperindah lirik)</i>
+<i>(berfungsi untuk memperindah lirik)</i>
 <b>Na tattiling lemo cina </b>
-<i>Dan terbalik jeruk manis”</i>
+<i>dan menjadi jeruk manis</i>
 <b>Si ojang ojanogoseng ..Kose.. </b>
-<i>Si ojang ojanogoseng ..Kose.. (memperindah lirik)</i>
+<i>(berfungsi untuk memperindah lirik)</i>
 
 <b>Lemo cina-ji ku-lamung sailong</b>
 <i>Jeruk manis yang ditanam</i>
-<b>Na dalima rappo-na </b>
+<b>Na dalima na rappo-ang </b>
 <i>Berbuah delima</i>
 <b>Apa bunga-na </b>
 <i>Bunganya apanya</i>
-<b>Elele apa bunga -na</b>
-<i>Bunganya apanya</i>
-<b>Bunga-na tonjong lango</b>
-<i>Teratai ungu bunganya”</i>
+<b>Elele apa bunga-na</b>
+<i>Apa bunganya</i>
+<b>Bunga tonjong lango</b>
+<i>Teratai ungu bunganya</i>
 <b>Si ojang ojangoseng Kose</b> 
-<i>Si ojang ojangoseng Kose (memperindah lirik)</i>
+<i>(berfungsi untuk memperindah lirik)</i>
 
-<b>Salapang bangngina bunga sailong</b>
+<b>Salapang bangngi-na bunga sailong</b>
 <i>Sembilan malam berbunga</i>
-<b>Na dalimana rappoang </b>
+<b>Na dalima na rappo-ang </b>
 <i>Berbuah delima</i>
-<b>Kimatimporong </b>
+<b>Ki-ma-timporong </b>
 <i>Kita menjenguk</i>
-<b>Elele…. Kimatimporong</b>
+<b>Elele... Ki-ma-timporong</b>
 <i>Kita menjenguk</i>
-<b>Ribija seppe-seppetta</b>
-<i>Keluarga dekat</i>
+<b>Ri-bija eppe-seppeq-ta</b>
+<i>Keluarga dekat kita</i>
 <b>Si ojang ojangoseng Kose</b>
-<i>Si ojang ojangoseng Kose (memperindah lirik)</i>
+<i>(berfungsi untuk memperindah lirik)</i>

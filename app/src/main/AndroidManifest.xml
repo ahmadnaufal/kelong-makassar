@@ -54,7 +54,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.tutorial.InfoKelongActivity"
-            android:label="@string/label_info_kelong_short"
+            android:label="@string/label_info_kelong"
             android:parentActivityName=".ui.tutorial.TutorialExampleActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

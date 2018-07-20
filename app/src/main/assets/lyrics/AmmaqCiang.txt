@@ -1,19 +1,19 @@
-<b>Ammaq ciang dendang ‘</b>
-<i>Ammaq ciang dendang”</i>
-<b>‘Ammaq ciang dendang ‘</b>
-<i>Ammaq ciang dendang”</i>
+<b>'Ammaq ciang dendang'</b>
+<i>Ammaq ciang dendang</i>
+<b>'Ammaq ciang dendang'</b>
+<i>Ammaq ciang dendang</i>
 <b>Ammaq ciang Tallu lawaraq lekoq-na</b>
-<i>tiga lembar daunnya”</i>
+<i>tiga lembar daunnya</i>
 <b>Alla napa- aqlang –i</b>
-<i>menaungi”</i>
+<i>menaungi</i>
 <b>Sikontu bone-na lino</b>
-<i>seisi dunia” </i>     
+<i>seisi dunia</i>     
 
 <b>Maq-biring kassi iya tu dende</b>
-<i>mendekatkan diri kepada sang pencipta”</i>
+<i>mendekatkan diri kepada sang pencipta</i>
 <b>Ma-tamparang ma-tamparang laisiq –nu</b>
-<i>bagaikan seluas lautan”</i>
+<i>bagaikan seluas lautan</i>
 <b>Alla Mak-tete bombang</b>
-<i>Meniti ombak”</i>
+<i>Meniti ombak</i>
 <b>Bukkuleng tama-laqju-a</b>
-<i>Tuhan yang tidak pernah lepas dari manusia”</i>
+<i>Tuhan yang tidak pernah lepas dari manusia</i>

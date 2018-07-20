@@ -40,7 +40,7 @@ public class InfoKelongActivity extends AppCompatActivity {
                 youTubePlayer.addListener(new AbstractYouTubePlayerListener() {
                     @Override
                     public void onReady() {
-                        String videoId = "ntIA7UZtoGU";
+                        String videoId = "pyLDjPTq87Q";
                         youTubePlayer.loadVideo(videoId, 0);
                     }
                 });

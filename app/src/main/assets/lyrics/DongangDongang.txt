@@ -1,15 +1,15 @@
-<b>Takunjunga  bangunturu galle</b>
+<b>Takunjunga bangunturu galle</b>
 <i>Sekali layar terkembang</i>
 <b>Na ku ginciri naung guling ku</b>
 <i>Kemudi sudah kuarahkan</i>
 <b>Kualleanna minasa natoali</b>
-<i>Takkan kembali sebelum cita-cita tercapai </i>
+<i>Takkan kembali sebelum cita-cita tercapai</i>
 <b>a dongang dongang labella karaeng</b>
 <i>a dongang dongang labella karaeng</i>
-<b>Dongang la dongang dongang la </b>
+<b>'Dongang la dongang dongang la'</b>
 <i>Dongang la dongang dongang la</i>
 <b>niaq mateqne nateqne nalalo apami gau</b>
-<i>Ada kebahagian namun terlewatkan jua</i>
+<i>Ada kebahagiaan namun terlewatkan jua</i>
 
 <b>Tutuki malepa –lepa galle</b>
 <i>hati-hatilah berlayar</i>
@@ -19,7 +19,7 @@
 <i>nanti anda tenggelam</i>
 <b>Ki nasakkoq alimbuqbuq</b>
 <i>tersedak debu</i>
-<b>a dongan dongang</b>
+<b>'a dongan dongang'</b>
 <i>a dongan dongang</i>
-<b>la bella karaeng</b>
+<b>'la bella karaeng'</b>
 <i>la bella karaeng</i>

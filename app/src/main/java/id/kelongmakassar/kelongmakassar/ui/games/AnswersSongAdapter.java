@@ -68,7 +68,11 @@ public class AnswersSongAdapter extends RecyclerView.Adapter<AnswersSongAdapter.
             playMediaImageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listener.onPlayClickListener(answerResId);
+                    if (listener.onPlayClickListener(answerResId)) {
+                        playMediaImageView.setImageResource(R.drawable.ic_pause_small);
+                    } else {
+                        playMediaImageView.setImageResource(R.drawable.ic_play_small);
+                    }
                 }
             });
 

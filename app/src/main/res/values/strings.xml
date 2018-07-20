@@ -13,8 +13,7 @@
     <string name="label_tutorial_example">Ayo, bernyanyi!</string>
     <string name="label_atiraja_vocal">Ati Raja dengan vokal</string>
     <string name="label_atiraja_no_vocal">Ati Raja tanpa vokal</string>
-    <string name="label_info_kelong">Info Kelong Makassar</string>
-    <string name="label_info_kelong_short">Info Kelong</string>
+    <string name="label_info_kelong">Apresiasi Kelong Makassar</string>
     <string name="label_profile">Profil</string>
 
     <string name="title_tracks">Playlist</string>
@@ -26,7 +25,7 @@
     <string name="desc_app">A short description about this application.</string>
     <string name="text_long_desc_kelong">Kelong Makassar adalah kumpulan syair-syair dalam puisi yang telah mengakar pada masyarakat Makassar dan dikembangkan menjadi gubahan lagu-lagu daerah dengan deratan nada-nada dan irama tertentu. Kelong Makassar atau Kelong Tau riolo (lagu orang dulu) adalah nyanyian yang dulunya diciptakan oleh penyair keturunan Tionghoa bernama Ho Eng Dji (HED).\n\nKelong Makassar termasuk pewarisan budaya lokal yang patut dilestarikan serta dijaga keberadaannya. Niai-nilai kelong Makassar banyak terkandung nasehat-nasehat kehidupan dunia akhirat termasuk cinta dan kasih sayang. Adapun fungsi kelong Makassar antara lain yaitu; Kelong sebagai media pendidikan, media hiburan, pembangkit semangat juang, media komunikasi dan Kelong sebagai produk dalam pelestarian budaya.</string>
 
-    <string name="text_info_kelong_desc">Yuk, dengar lagu Kelong Ati Raja versi Bapak Bundu\' (69 tahun)</string>
+    <string name="text_info_kelong_desc">Yuk, nonton Orkes Tau Riolo!\nOrkes Tau Riolo ini sudah ada sekitar tahun 1955.\nSaat ini sudah berkembang menjadi orkes langgam daerah Makassar.</string>
 
     <string name="text_info_kelong_name"><b>Nama :</b> Muh. Syarif Dg. Bundu (Pensiunan Pegawai Kebudayaan Peninggalan Sejarah dan Purbakala Provinsi SulSelTeng)</string>
     <string name="text_info_kelong_profesi"><b>Profesi :</b> Pemain Musik Tradisi Orkes Tauriolo (Biola dan Vokal) Bungabiraeng dan menggeluti dunia musik Kelong Makassar dari tahun 1955-Sekarang</string>
@@ -42,9 +41,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string-array name="text_array_kelong_makassar_desc">
-        <item> </item>
-        <item>Pada umumnya masyarakat Makassar mengartikan Kelong adalah lagu atau nyanyian dan termasuk warisan budaya lokal yang patut dilestarikan dan dijaga keberadaannya</item>
-        <item>Nilai-nilai kelong Makassar banyak mengandung nasehat, tentang kehidupan dunia akhirat. Fungsi kelong Makassar antara lain yaitu; Kelong sebagai media pendidikan, media hiburan, pembangkit semangat juang, media komunikasi dan Kelong sebagai produk dalam pelestarian budaya.</item>
-        <item>Ho Eng Dji adalah salah satu tokoh penting penulis syair kelong Makassar</item>
+        <item>Kelong adalah nyanyian atau puisi yang digubah ke dalam lagu Makassar. Kelong Makassar termasuk warisan budaya lokal yang patut dilestarikan dan dijaga keberadaannya.</item>
+        <item>Nilai-nilai yang terdapat pada kelong Makassar banyak mengandung nasehat tentang dunia akhirat.</item>
+        <item>Fungsi kelong Makassar antara lain: sebagai media pendidikan, media hiburan, pembangkit semangat juang, media komunikasi dan sebagai produk dalam pelestarian budaya.</item>
+        <item>Ho Eng Dji adalah salah satu tokoh penting dalam sejarah penciptaan syair-syair kelong Makassar.</item>
     </string-array>
 </resources>

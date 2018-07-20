@@ -26,7 +26,7 @@
             fontPath="fonts/BackToBlackDemo.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_info_kelong_short"
+            android:text="@string/label_info_kelong"
             android:textColor="@color/colorPrimary"
             android:textSize="32sp"
             android:textAlignment="center"
@@ -47,37 +47,4 @@
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_background_default"
-        android:layout_marginTop="16dp"
-        android:orientation="vertical"
-        android:padding="12dp">
-
-        <TextView
-            fontPath="fonts/ArcherBold.otf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:textAlignment="center"
-            android:textSize="28sp"
-            android:text="@string/label_profile" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_kelong_name" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_kelong_profesi" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_info_kelong_date" />
-    </LinearLayout>
 </LinearLayout>

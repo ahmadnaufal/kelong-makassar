@@ -33,10 +33,10 @@ public class DataManager {
 
     public List<Tutorial> getTutorials() {
         ArrayList<Tutorial> tutorials = new ArrayList<>();
-        tutorials.add(new Tutorial("Besoq-Besoq Na", "Istilah dalam menyeret nada", R.raw.tut_1, "Jika diartikan kata perkata dalam bahasa sehari-hari kata besoq adalah gait, tarik. Ketika dikaitkan dengan kelong atau lagu maka bermakna menyanyikan nada secepat mungkin dari satu nada ke nada berikutnya."));
-        tutorials.add(new Tutorial("Lekko-Lekko Na", "Istilah Cengkok daerah Makassar", R.raw.tut_2, "Jika diartikan kata perkata dalam bahasa sehari-hari kata lekko adalah belok, liukan. Ketika dikaitkan dengan kelong atau lagu maka bermakna suara yang berliku-liuk bagaikan gelombang."));
-        tutorials.add(new Tutorial("Mebbereq Saqra", "Istilah vibra Kelong Makasssar", R.raw.tut_3, "Jika diartikan kata perkata dalam bahasa sehari-hari mebbereq saqra adalah getaran suara. Ketika dikaitkan dengan kelong atau lagu maka bermakna getaran suara."));
-        tutorials.add(new Tutorial("Belo-Belona", "Penambahan kata dalam kalimat lagu", R.raw.tut_4, "Jika diartikan kata perkata dalam bahasa sehari-hari kata belo adalah hias. Ketika dikaitkan dengan kelong atau lagu maka bermakna hiasan kata pada lagu."));
+        tutorials.add(new Tutorial("Besoq-Besoq Na", "Istilah dalam menarik atau menyeret nada", R.raw.tut_1, "Besoq-besoqna berasal dari kata besoq artinya tarik. Jika dikaitkan dengan musik/kelong maka bermakna bernyanyi dengan menyeret atau menarik nada secepat mungkin dari nada satu ke nada yang berikutnya."));
+        tutorials.add(new Tutorial("Lekko-Lekko Na", "Istilah Cengkok daerah Makassar", R.raw.tut_2, "Lekko-lekkona berasal dari kata lekko artinya liuk. Jika dikaitkan dengan musik/kelong maka bermakna seperti meliuk-liukan suara bagaikan gelombang atau biasa disebut cengkok daerah Makassar."));
+        tutorials.add(new Tutorial("Mebbereq Saqra", "Istilah vibra", R.raw.tut_3, "Mebbereq Saqra berasal dari kata mebbereq artinya getaran dan saqra artinya suara. Jika dikaitkan dengan musik/kelong maka bermakna getaran pada suara yang biasa disebut dengan vibra."));
+        tutorials.add(new Tutorial("Belo-Belona", "Hiasan kata pada lagu", R.raw.tut_4, "Belo-belona berasal dari kata belo yang artinya hias. Jika dikaitkan dengan musik/kelong maka bermakna hiasan kata pada lirik yang bertujuan untuk memperindah arti lagu."));
 
         return tutorials;
     }
