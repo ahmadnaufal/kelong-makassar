@@ -21,8 +21,6 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class LandingActivity extends AppCompatActivity {
 
     @BindView(R.id.layout_buttons) LinearLayout mButtonsLayout;
-    @BindView(R.id.layout_container) LinearLayout mContainerLayout;
-    @BindView(R.id.image_pull_down) ImageView mPullDownImageView;
 
     public static Intent getStartIntent(Context context) {
         Intent intent = new Intent(context, LandingActivity.class);
@@ -44,15 +42,12 @@ public class LandingActivity extends AppCompatActivity {
     }
 
     private void initLayout() {
-        mButtonsLayout.setVisibility(View.VISIBLE);
-
-        mContainerLayout.setVisibility(View.GONE);
+        mButtonsLayout.setVisibility(View.GONE);
     }
 
-    @OnClick(R.id.image_pull_down)
+    @OnClick(R.id.button_toggle_menu)
     void onPullDownClick() {
-        mContainerLayout.setVisibility(View.VISIBLE);
-        mPullDownImageView.setVisibility(View.GONE);
+        mButtonsLayout.setVisibility(View.VISIBLE);
     }
 
     @OnClick(R.id.button_kelong)
