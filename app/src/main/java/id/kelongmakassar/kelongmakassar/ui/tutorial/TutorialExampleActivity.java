@@ -56,6 +56,15 @@ public class TutorialExampleActivity extends AppCompatActivity implements MediaP
         setUpMedia(exampleResId);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mMediaPlayer != null) {
+            stopMedia();
+            mMediaPlayer.release();
+        }
+    }
+
     private void setUpMedia(int resId) {
         mMediaPlayer = new MediaPlayer();
 

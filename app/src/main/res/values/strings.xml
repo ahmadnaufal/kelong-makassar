@@ -39,6 +39,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_back_to_menu">Kembali ke Menu Utama</string>
 
     <string-array name="text_array_kelong_makassar_desc">
         <item>Kelong adalah nyanyian atau puisi yang digubah ke dalam lagu Makassar. Kelong Makassar termasuk warisan budaya lokal yang patut dilestarikan dan dijaga keberadaannya.</item>

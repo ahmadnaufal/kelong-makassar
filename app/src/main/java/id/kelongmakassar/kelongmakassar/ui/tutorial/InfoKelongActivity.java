@@ -15,6 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import id.kelongmakassar.kelongmakassar.R;
+import id.kelongmakassar.kelongmakassar.ui.LandingActivity;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class InfoKelongActivity extends AppCompatActivity {
@@ -56,6 +57,15 @@ public class InfoKelongActivity extends AppCompatActivity {
     @OnClick(R.id.image_back)
     void onBackClick() {
         super.onBackPressed();
+    }
+
+    @OnClick(R.id.button_back_menu)
+    void onBackToMenuClick() {
+        Intent intent = LandingActivity.getStartIntent(this);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+
+        finish();
     }
 
     @Override

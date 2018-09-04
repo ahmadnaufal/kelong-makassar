@@ -17,26 +17,19 @@
         android:textAlignment="center"
         android:textSize="24sp" />
 
-    <ScrollView
+    <com.jsibbold.zoomage.ZoomageView
+        android:id="@+id/image_notation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:src="@drawable/ati_raja"
+        android:adjustViewBounds="true"
         android:layout_marginTop="8dp"
-        android:scrollbars="vertical"
-        android:fillViewport="true">
-
-        <com.jsibbold.zoomage.ZoomageView
-            android:id="@+id/image_notation"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ati_raja"
-            android:adjustViewBounds="true"
-            app:zoomage_restrictBounds="false"
-            app:zoomage_animateOnReset="true"
-            app:zoomage_autoResetMode="UNDER"
-            app:zoomage_autoCenter="true"
-            app:zoomage_zoomable="true"
-            app:zoomage_translatable="true"
-            app:zoomage_minScale="0.6"
-            app:zoomage_maxScale="8" />
-    </ScrollView>
+        app:zoomage_restrictBounds="false"
+        app:zoomage_animateOnReset="true"
+        app:zoomage_autoResetMode="UNDER"
+        app:zoomage_autoCenter="true"
+        app:zoomage_zoomable="true"
+        app:zoomage_translatable="true"
+        app:zoomage_minScale="0.6"
+        app:zoomage_maxScale="8" />
 </LinearLayout>
